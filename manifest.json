@@ -1,0 +1,22 @@
+{
+  "name": "Fraud Detection Tool",
+  "description": "A Chrome Extension which marks offers on ebay Kleinanzeigen from potential scammers",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "author": "Christopher Barnes",
+  "minimum_chrome_version": "88",
+  "icons": {
+    "16": "./assets/icons/16x16.png",
+    "32": "./assets/icons/32x32.png",
+    "48": "./assets/icons/48x48.png",
+    "128": "./assets/icons/128x128.png"
+  },
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "options_page": "./options.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "https://www.ebay-kleinanzeigen.de/*"]
+}

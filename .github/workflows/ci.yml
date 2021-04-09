@@ -1,0 +1,87 @@
+name: Browser Extension CI
+on: 
+  push:
+    branches: 
+      - main
+      - developer
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+
+  prettier:
+    # https://github.com/marketplace/actions/prettier-action
+      name: prettier
+      runs-on: ubuntu-20.04
+
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Prettify code
+        uses: creyD/prettier_action@v3.1
+        with:
+          prettier_options: --write **/*.{html,js} --config .prettierrc.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  Linter:
+    # https://github.com/github/super-linter/blob/master/README.md
+      name: Lint Code Base
+      runs-on: ubuntu-20.04
+
+      steps:
+        - name: Checkout Code
+          uses: actions/checkout@v2
+          with:
+            # Full git history is needed to get a proper list of changed files within `super-linter`
+            fetch-depth: 0
+
+        # Run Linter against code base #
+        - name: Lint Code Base
+          uses: github/super-linter@v3
+          env:
+            VALIDATE_ALL_CODEBASE: false
+            VALIDATE_JAVASCRIPT_ES: true
+            VALIDATE_HTML: true
+            DEFAULT_BRANCH: main
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  analyze:
+    # https://github.com/github/codeql-action
+      name: Analyze with CodeQL
+      runs-on: ubuntu-20.04
+
+      steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
+        with:
+          languages: javascript
+          # Specifies which language is scanned
+          # https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#changing-the-languages-that-are-analyzed
+
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v1
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1
+
+  sonarScan:
+    # https://github.com/SonarSource/sonarcloud-github-action
+      name: SonarCloud
+      runs-on: ubuntu-20.04
+
+      steps:
+        - uses: actions/checkout@v2
+          with:
+            fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+        - name: SonarCloud Scan
+          uses: SonarSource/sonarcloud-github-action@master
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
