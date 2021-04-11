@@ -5,20 +5,11 @@
   padding: 2px 6px;
   position: absolute;
   right: -6px;
-  top: -60px;
+  top: -65px;
   text-align: right;
   max-width: 100px;
   font-size: 12px;
   cursor: pointer;
-}
-
-.itemtile-ribbon:after {
-  border-color: transparent;
-  border-width: 4px;
-  bottom: -4px;
-  right: 2px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 .fraud-ribbon:after, .fraud-ribbon:before {
@@ -39,19 +30,32 @@
   white-space: nowrap;
 }
 
+.fraud-ribbon:after {
+  border-color: transparent;
+  border-width: 4px;
+  bottom: -4px;
+  right: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .red {
   background-color: red;
+  border-right-color: #cc0000;
 }
 
 .orange {
   background-color: orange;
-}
-
-.green {
-  background-color: grenn;
+  border-right-color: #cc8400;
 }
 
 .yellow {
   background-color: yellow;
+  border-right-color: #cccc00;
   color: black;
+}
+
+.green {
+  background-color: green;
+  border-right-color: #004d00;
 }

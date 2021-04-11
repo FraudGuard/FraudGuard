@@ -5,21 +5,11 @@
   padding: 2px 6px
   position: absolute
   right: -6px
-  top: -60px
+  top: -65px
   text-align: right
   max-width: 100px
   font-size: 12px
   cursor: pointer
-
-.itemtile-ribbon:after
-  border-color: transparent
-  // border-right-color: #678D20 // TODO make matching with current fraud value
-  border-width: 4px
-  bottom: -4px
-  right: 2px
-  -webkit-transform: rotate(45deg)
-  -ms-transform: rotate(45deg)
-  transform: rotate(45deg)
 
 .fraud-ribbon:after, .fraud-ribbon:before
   right: 100%
@@ -37,15 +27,28 @@
   overflow: hidden
   white-space: nowrap
 
+.fraud-ribbon:after
+  border-color: transparent
+  border-width: 4px
+  bottom: -4px
+  right: 2px
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
 .red
   background-color: red
+  border-right-color: darken(red, 10)
 
 .orange
   background-color: orange
-
-.green
-  background-color: grenn
+  border-right-color: darken(orange, 10)
 
 .yellow
   background-color: yellow
+  border-right-color: darken(yellow, 10)
   color: black
+
+.green
+  background-color: green
+  border-right-color: darken(green, 10)

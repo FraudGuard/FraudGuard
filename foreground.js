@@ -1,6 +1,7 @@
 let itemtiles = document.getElementsByClassName('itemtile-body');
 
-for (let i = 0; i < itemtiles.length; i += 1) {
+// Generating a Ribbon for each tile ==> should be each ads (exclude tiles that are not an ad)
+for (tile of itemtiles) {
   let fraudRibbon = document.createElement('div');
   fraudRibbon.className = 'fraud-ribbon';
 
@@ -8,42 +9,39 @@ for (let i = 0; i < itemtiles.length; i += 1) {
   fraudProbability.className = 'fraud-probability';
 
   fraudRibbon.appendChild(fraudProbability);
-  itemtiles[i].appendChild(fraudRibbon);
+  tile.appendChild(fraudRibbon);
 }
 
 // Mocking the probability
 let mockData = document.getElementsByClassName('fraud-probability');
-for (let i = 0; i < mockData.length; i += 1) {
+for (x of mockData) {
   let ran = Math.round(Math.random() * 100);
-  mockData[i].innerHTML = ran;
-  mockData[i].setAttribute('fraud-probability', ran);
+  x.innerHTML = ran;
+  x.setAttribute('fraud-probability', ran);
 }
-// if VB oder job kein mock genereiren
 
-const between = (x, min, max) => {
-  return x >= min && x <= max;
-};
-
+// Grabbing all the spans with fraud-probability
 let fraudProbabilities = document.getElementsByClassName('fraud-probability');
 
-// TODO DISGUSTING FIX THIS SHIT ASAP
-for (let i = 0; i < fraudProbabilities.length; i += 1) {
-  if (fraudProbabilities[i].innerHTML < 19) {
-    fraudProbabilities[i].parentElement.classList.add('green');
-  }
-  if (fraudProbabilities[i].innerHTML > 60) {
-    fraudProbabilities[i].parentElement.classList.add('red');
-  }
-  if (
-    fraudProbabilities[i].innerHTML < 30 &&
-    fraudProbabilities[i].innerHTML > 19
+// Assigning background-color class to the ribbons based on the probability in the spans
+for (fraudProbability of fraudProbabilities) {
+  if (fraudProbability.innerHTML < 19) {
+    fraudProbability.parentElement.classList.add('green');
+    fraudProbability.parentElement.classList.add('green');
+  } else if (
+    fraudProbability.innerHTML < 30 &&
+    fraudProbability.innerHTML > 19
   ) {
-    fraudProbabilities[i].parentElement.classList.add('yellow');
-  }
-  if (
-    fraudProbabilities[i].innerHTML < 59 &&
-    fraudProbabilities[i].innerHTML > 30
+    fraudProbability.parentElement.classList.add('yellow');
+    fraudProbability.parentElement.classList.add('yellow');
+  } else if (
+    fraudProbability.innerHTML < 59 &&
+    fraudProbability.innerHTML > 30
   ) {
-    fraudProbabilities[i].parentElement.classList.add('orange');
+    fraudProbability.parentElement.classList.add('orange');
+    fraudProbability.parentElement.classList.add('orange');
+  } else {
+    fraudProbability.parentElement.classList.add('red');
+    fraudProbability.parentElement.classList.add('red');
   }
 }

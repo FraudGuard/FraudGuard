@@ -16,7 +16,7 @@
 
 **An efficient Fraud-Detection add-on for ebay Kleinanzeigen. Fast, accurate, and lean.**
 
-???? is a browser extension which helps you to find potential scammer on ebay Kleinanzeigen by using natural language processing and user behavior analys.
+???? is a browser extension which helps you to find potential scammer on ebay Kleinanzeigen by using a machine learning and natural language processing.
 
 The goal of this project is to improve our experience with buying items on ebay Kleinanzeigen,
 by giving the buyer a securer environment.
