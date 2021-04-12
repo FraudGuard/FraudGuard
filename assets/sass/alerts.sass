@@ -22,13 +22,12 @@
 
 .fraud-probability
   display: block
-  max-width: 9em
+  max-width: 10em
   text-overflow: ellipsis
   overflow: hidden
   white-space: nowrap
 
 .fraud-ribbon:after
-  border-color: transparent
   border-width: 4px
   bottom: -4px
   right: 2px
@@ -38,17 +37,22 @@
 
 .red
   background-color: red
-  border-right-color: darken(red, 10)
+
+.red.fraud-ribbon:after
+  border-color: darken(red, 10)
 
 .orange
   background-color: orange
-  border-right-color: darken(orange, 10)
+.orange.fraud-ribbon:after
+  border-color: darken(orange, 10)
 
 .yellow
   background-color: yellow
-  border-right-color: darken(yellow, 10)
   color: black
+.yellow.fraud-ribbon:after
+  border-color: darken(yellow, 10)
 
 .green
   background-color: green
-  border-right-color: darken(green, 10)
+.green.fraud-ribbon:after
+  border-color: darken(green, 10)
