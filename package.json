@@ -1,0 +1,44 @@
+{
+  "name": "extension",
+  "version": "0.1.0",
+  "description": "Browser Extension",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "build": "rimraf ./dist && webpack --mode production",
+    "prettier": "npx prettier --write src/**/*.js",
+    "linter": "npx eslint src/**/*.js -c ./.eslintrc.yml --fix",
+    "postinstall": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Barnes-C/fictional-broccoli.git"
+  },
+  "keywords": [
+    "javascript",
+    "chrome",
+    "extension"
+  ],
+  "author": "Christopher Barnes",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Barnes-C/fictional-broccoli/issues"
+  },
+  "homepage": "https://github.com/Barnes-C/fictional-broccoli#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "css-loader": "^5.2.3",
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.2.0",
+    "husky": "^6.0.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  }
+}

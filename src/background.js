@@ -5,8 +5,8 @@ chrome.tabs.onActivated.addListener((tab) => {
     active_tab_id = tab.tabId;
 
     if (/^https:\/\/www\.ebay-kleinanzeigen/.test(current_tab_info.url)) {
-      chrome.tabs.insertCSS(null, { file: './assets/css/alerts.css' });
-      chrome.tabs.executeScript(null, { file: './foreground.js' }, () =>
+      chrome.tabs.insertCSS(null, { file: './css/alerts.css' });
+      chrome.tabs.executeScript(null, { file: './main.bundle.js' }, () =>
         console.log('i injected'),
       );
     }
