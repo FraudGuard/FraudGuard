@@ -13,8 +13,8 @@ for (let tile of itemtiles) {
 }
 
 // Mocking the probability
-let mockData = document.getElementsByClassName('fraud-probability');
-for (let x of mockData) {
+let mockProb = document.getElementsByClassName('fraud-probability');
+for (let x of mockProb) {
   let ran = Math.round(Math.random() * 100);
   x.innerHTML = 'Scam: ' + ran + '%';
   x.setAttribute('fraud-probability', ran);

@@ -1,2 +1,4 @@
 LICENSE
 ReadMe.md
+/dist
+/node_modules

@@ -1,0 +1,84 @@
+.fraud-ribbon {
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  padding: 2px 6px;
+  position: absolute;
+  right: -6px;
+  top: -65px;
+  text-align: right;
+  max-width: 100px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fraud-ribbon:after, .fraud-ribbon:before {
+  right: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.fraud-probability {
+  display: block;
+  max-width: 10em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fraud-ribbon:after {
+  border-width: 4px;
+  bottom: -4px;
+  right: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.red {
+  background-color: red;
+}
+
+.red.fraud-ribbon:after {
+  border-right-color: #cc0000;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange.fraud-ribbon:after {
+  border-right-color: #cc8400;
+}
+
+.yellow {
+  background-color: yellow;
+  color: black;
+}
+
+.yellow.fraud-ribbon:after {
+  border-right-color: #cccc00;
+}
+
+.green {
+  background-color: green;
+}
+
+.green.fraud-ribbon:after {
+  border-right-color: #004d00;
+}
+
+.aditem-main--bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.text-module-end {
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+  padding-right: 10px;
+}
