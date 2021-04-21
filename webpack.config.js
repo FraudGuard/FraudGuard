@@ -3,21 +3,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     background: ['babel-polyfill', './src/background.js'],
-    main: './src/foreground.js',
+    main: './src/entry.js',
   },
   output: {
     filename: '[name].bundle.js',
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        loader: 'css-loader',
-        options: {
-          import: true,
-        },
-      },
-    ],
   },
   plugins: [
     new CopyWebpackPlugin({
