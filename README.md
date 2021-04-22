@@ -4,13 +4,13 @@
 <p align="center">
   </br></br>
   <a href="https://chrome.google.com/webstore/detail/">
-    <img src="./assets/images/chrome.png" alt="Chrome Web Store"></a>
+    <img src="./src/assets/images/chrome.png" alt="Chrome Web Store"></a>
   <a href="https://addons.mozilla.org/en-US/firefox/addon//">
-    <img src="./assets/images/firefox.png" alt="Firefox add-ons"></a>
+    <img src="./src/assets/images/firefox.png" alt="Firefox add-ons"></a>
   <a href="https://microsoftedge.microsoft.com/addons/detail/">
-    <img src="./assets/images/microsoft.png" alt="Microsoft Store"></a>
+    <img src="./src/assets/images/microsoft.png" alt="Microsoft Store"></a>
   <a href="https://addons.opera.com/en/extensions/details/">
-    <img src="./assets/images/opera.png" alt="Opera add-ons"></a>
+    <img src="./src/assets/images/opera.png" alt="Opera add-ons"></a>
   </br></br>
 </p>
 

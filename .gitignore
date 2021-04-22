@@ -2,3 +2,4 @@ back.log
 /dist
 assets/css
 node_modules
+/.husky

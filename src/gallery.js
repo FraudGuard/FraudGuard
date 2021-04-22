@@ -1,11 +1,11 @@
-let itemtiles = document.getElementsByClassName('itemtile-body');
+const itemtiles = document.getElementsByClassName('itemtile-body');
 
 // Generating a Ribbon for each tile ==> should be each ads (exclude tiles that are not an ad)
-for (let tile of itemtiles) {
-  let fraudRibbon = document.createElement('div');
+for (const tile of itemtiles) {
+  const fraudRibbon = document.createElement('div');
   fraudRibbon.className = 'fraud-ribbon';
 
-  let fraudProbability = document.createElement('span');
+  const fraudProbability = document.createElement('span');
   fraudProbability.className = 'fraud-probability';
 
   fraudRibbon.appendChild(fraudProbability);
@@ -13,18 +13,18 @@ for (let tile of itemtiles) {
 }
 
 // Mocking the probability
-let mockProb = document.getElementsByClassName('fraud-probability');
-for (let x of mockProb) {
-  let ran = Math.round(Math.random() * 100);
-  x.innerHTML = 'Scam: ' + ran + '%';
+const mockProb = document.getElementsByClassName('fraud-probability');
+for (const x of mockProb) {
+  const ran = Math.round(Math.random() * 100);
+  x.innerHTML = `Scam: ${ran}%`;
   x.setAttribute('fraud-probability', ran);
 }
 
 // Grabbing all the spans with fraud-probability
-let fraudProbabilities = document.getElementsByClassName('fraud-probability');
+const fraudProbabilities = document.getElementsByClassName('fraud-probability');
 
 // Assigning background-color class to the ribbons based on the probability in the spans
-for (let fraudProbability of fraudProbabilities) {
+for (const fraudProbability of fraudProbabilities) {
   if (fraudProbability.getAttribute('fraud-probability') < 19) {
     fraudProbability.parentElement.classList.add('green');
   } else if (
@@ -43,7 +43,7 @@ for (let fraudProbability of fraudProbabilities) {
 }
 
 // Remove probabilities on ads that dont have a price
-for (let item of itemtiles) {
+for (const item of itemtiles) {
   if (item.childElementCount === 3) {
     item.removeChild(item.lastChild);
   }
