@@ -45,6 +45,7 @@ jobs:
             VALIDATE_JAVASCRIPT_ES: true
             VALIDATE_HTML: true
             DEFAULT_BRANCH: main
+            JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.yml
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   analyze:
