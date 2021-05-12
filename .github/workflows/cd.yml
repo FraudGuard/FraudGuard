@@ -30,7 +30,7 @@ jobs:
           npm ci
           npm run build
           sudo apt install zip
-          zip -r dist dist
+          zip -r FraudGuard.windows-amd64 dist
 
     - name: release
       uses: actions/create-release@v1
@@ -51,6 +51,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./bin/azblogfilter.windows-amd64.zip
-          asset_name: azblogfilter.windows-amd64.zip
+          asset_path: ./FraudGuard.windows-amd64.zip
+          asset_name: FraudGuard.windows-amd64.zip
           asset_content_type: application/zip
