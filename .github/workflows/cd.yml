@@ -30,7 +30,7 @@ jobs:
           npm ci
           npm run build
           sudo apt install zip
-          zip -r FraudGuard.windows-amd64 dist
+          zip -r FraudGuard.windows-amd64.zip dist
 
     - name: release
       uses: actions/create-release@v1
