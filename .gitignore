@@ -3,3 +3,4 @@ back.log
 assets/css
 node_modules
 /.husky
+/*.zip

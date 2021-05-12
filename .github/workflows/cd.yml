@@ -22,7 +22,7 @@ jobs:
         fetch-depth: 0
 
     - name: version
-      run: echo "::set-output name=version::$(./bin/FraudGuard --version)"
+      run: echo ::set-output name=version::${GITHUB_REF#refs/*/}
       id: version
 
     - name: Build artifact
@@ -30,27 +30,13 @@ jobs:
           npm ci
           npm run build
           sudo apt install zip
-          zip -r FraudGuard.windows-amd64.zip dist
+          zip -rm FraudGuard.windows-amd64.zip dist
 
-    - name: release
-      uses: actions/create-release@v1
-      id: create_release
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
       with:
-          draft: false
-          prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
-          tag_name: ${{ github.ref }}
-          body_path: CHANGELOG.md
-      env:
-          GITHUB_TOKEN: ${{ github.token }}
-
-
-    - name: upload windows artifact
-      uses: actions/upload-release-asset@v1
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./FraudGuard.windows-amd64.zip
-          asset_name: FraudGuard.windows-amd64.zip
-          asset_content_type: application/zip
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./FraudGuard.windows-amd64.zip
+        tag: ${{ github.ref }}
+        overwrite: true
+        file_glob: true

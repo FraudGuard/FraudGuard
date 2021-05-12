@@ -1,5 +1,4 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ZipPlugin = require('zip-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -17,12 +16,6 @@ module.exports = {
         { from: 'src/assets/html', to: 'html' },
         { from: 'manifest.json', to: 'manifest.json' },
       ],
-    }),
-
-    new ZipPlugin({
-      path: 'dist',
-      filename: 'fraudguard.zip',
-      pathPrefix: 'relative/path',
     }),
   ],
 };
