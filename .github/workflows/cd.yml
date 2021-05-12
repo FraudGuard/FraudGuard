@@ -6,29 +6,50 @@ on:
        - 'v*'
 
 jobs:
-  build:
-    name: Publish browser-extension
-    runs-on: ubuntu-latest
+  build_release:
+    runs-on: ubuntu-20.04
+    name: create release
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - uses: actions/setup-node@v1
       with:
         node-version: 16
 
-    - name: Build
-      run: |
-        npm ci
-        npm run build
-        sudo apt install zip
-        zip -r dist dist
-
-    - name: Upload & release
-      uses: mnao305/chrome-extension-upload@1.1.1
+    - name: Checkout code
+      uses: actions/checkout@v2
       with:
-        file-path: /dist.zip
-        extension-id: idontknow
-        client-id: ${{ secrets.CLIENT_ID }}
-        client-secret: ${{ secrets.CLIENT_SECRET }}
-        refresh-token: ${{ secrets.REFRESH_TOKEN }}
-        glob: true
+        fetch-depth: 0
+
+    - name: version
+      run: echo "::set-output name=version::$(./bin/FraudGuard --version)"
+      id: version
+
+    - name: Build artifact
+      run: |
+          npm ci
+          npm run build
+          sudo apt install zip
+          zip -r dist dist
+
+    - name: release
+      uses: actions/create-release@v1
+      id: create_release
+      with:
+        draft: false
+        prerelease: false
+        release_name: ${{ steps.version.outputs.version }}
+        tag_name: ${{ github.ref }}
+        body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: upload windows artifact
+      uses: actions/upload-release-asset@v1
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./bin/azblogfilter.windows-amd64.zip
+          asset_name: azblogfilter.windows-amd64.zip
+          asset_content_type: application/zip
