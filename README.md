@@ -1,5 +1,5 @@
 <p align="center"><img src="./assets/images/logo.png"></p>
-<h1 align="center">????: Fraud-Detection Tool</h1>
+<h1 align="center">FraudGuard: Fraud-Detection Tool</h1>
 
 <p align="center">
   </br></br>
@@ -16,7 +16,7 @@
 
 **An efficient Fraud-Detection add-on for ebay Kleinanzeigen. Fast, accurate, and lean.**
 
-???? is a browser extension which helps you to find potential scammer on ebay Kleinanzeigen by using a machine learning approach and natural language processing.
+FraudGuard is a browser extension which helps you to find potential scammer on ebay Kleinanzeigen by using a machine learning approach and natural language processing.
 
 The goal of this project is to improve the experience with buying items on ebay Kleinanzeigen,
 by giving the user a securer environment.

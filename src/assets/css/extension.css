@@ -75,10 +75,34 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .text-module-end {
   -webkit-margin-before: auto;
           margin-block-start: auto;
   padding-right: 10px;
+}
+
+.green-tag {
+  border: 1px solid green;
+}
+
+.yellow-tag {
+  border: 1px solid yellow;
+}
+
+.orange-tag {
+  border: 1px solid orange;
+}
+
+.red-tag {
+  border: 1px solid red;
+}
+
+#fraudAdButton {
+  border: 1px solid black;
 }

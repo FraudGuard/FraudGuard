@@ -1,10 +1,10 @@
-import sendData from './request';
+import sendData from './sendData';
 
 if (!document.getElementById('fraudAdButton')) {
   const fraudContainer = document.createElement('li');
 
   const fraudAd = document.createElement('button');
-  fraudAd.setAttribute('onclick', sendData);
+  fraudAd.addEventListener('click', sendData);
   fraudAd.className = 'button-ghost full-width taller';
   fraudAd.id = 'fraudAdButton';
 
