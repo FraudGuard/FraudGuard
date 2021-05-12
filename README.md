@@ -23,11 +23,7 @@ by giving the user a securer environment.
 
 - [Documentation](#documentation)
 - [Purpose & General Info](#purpose-&-general-info)
-- [Installation](#installation)
-  - [Chromium](#chromium)
-  - [Firefox](#firefox--firefox-for-android)
-  - [Microsoft Edge](#microsoft-edge)
-  * [Safari (macOS)](#safari-macos)
+- [Installation](./installation.md)
 - [Release History](#release-history)
 - [Privacy policy](#privacy-policy)
 - [License](LICENSE)
@@ -36,21 +32,7 @@ by giving the user a securer environment.
 
 ## Purpose & General Info
 
-## Installation
-
-#### Chromium
-
-#### Firefox / Firefox for Android
-
-#### Microsoft Edge
-
-#### Safari (macOS)
-
-#### Note for all browsers
-
 ## Release History
-
-## Privacy policy
 
 ## License
 
