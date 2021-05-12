@@ -17,5 +17,11 @@ module.exports = {
         { from: 'manifest.json', to: 'manifest.json' },
       ],
     }),
+
+    new ZipPlugin({
+      path: 'dist',
+      filename: 'fraudguard.zip',
+      pathPrefix: 'relative/path',
+    }),
   ],
 };

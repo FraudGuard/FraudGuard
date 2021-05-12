@@ -7,36 +7,26 @@ on:
 
 jobs:
   build:
-    name: Upload Release Asset
+    name: Publish browser-extension
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 16
 
-      - name: Build project
-        run: |
-          npm install &&
-          npm build &&
-          zip --junk-paths dist README.md
+    - name: Build
+      run: |
+        npm ci
+        npm run build
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-
-      - name: Upload Release Asset
-        id: upload-release-asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist.zip
-          asset_name: dist.zip
-          asset_content_type: application/zip
+    - name: Upload & release
+      uses: mnao305/chrome-extension-upload@1.1.1
+      with:
+        file-path: dist/*.zip
+        extension-id: hogefuga(extension id)
+        client-id: ${{ secrets.CLIENT_ID }}
+        client-secret: ${{ secrets.CLIENT_SECRET }}
+        refresh-token: ${{ secrets.REFRESH_TOKEN }}
+        glob: true
