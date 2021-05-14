@@ -12,7 +12,7 @@ Hier müssen Sie nun die Version für Ihr Betriebssystem herunterladen. Haben Si
 
 ### **3**
 
-Jetzt gehen gehen Sie in ihren Chromebrowser und drücken oben rechts auf das Kebab-Menü(⋮) -> Weitere Tools -> Erweiterungen.
+Jetzt gehen Sie in ihren Chromebrowser und drücken oben rechts auf das Kebab-Menü(⋮) -> Weitere Tools -> Erweiterungen.
 
 ![kebab](./src/assets/images/kebab.png)
 
