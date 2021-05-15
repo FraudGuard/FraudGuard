@@ -1,22 +1,26 @@
 ### **1**
 
-Um die Chrome-Erweiterung zu Ihrem Browser hinzuzufügen müssen Sie diese erst herunterladen. Dies machen Sie indem sie auf die neuste Version clicken.
-
-![root](./src/assets/images/root.png)
+Als Erstes besuchen Sie die Seite unseres Repositories indem sie "https://github.com/FraudGuard/FraudGuard" in ihrem Browser aufrufen.
 
 ### **2**
 
-Hier müssen Sie nun die Version für Ihr Betriebssystem herunterladen. Haben Sie das getan müssen Sie die heruntergeladene Datei jetzt noch ausgepacken.
+Um die Chrome-Erweiterung zu Ihrem Browser hinzuzufügen, müssen Sie diese erst herunterladen. Dies machen Sie indem sie auf die neuste Version klicken.
 
-![releases](./src/assets/images/releases.png)
+![root](./src/assets/images/root.png)
 
 ### **3**
 
-Jetzt gehen Sie in ihren Chromebrowser und drücken oben rechts auf das Kebab-Menü(⋮) -> Weitere Tools -> Erweiterungen.
+Hier müssen Sie nun die Version für Ihr Betriebssystem herunterladen. Haben Sie das getan müssen Sie die heruntergeladene Datei jetzt noch auspacken.
+
+![releases](./src/assets/images/releases.png)
+
+### **4**
+
+Jetzt gehen Sie in ihren Chromebrowser und drücken oben rechts auf das Burger-Menü(⋮) -> Weitere Tools -> Erweiterungen.
 
 ![kebab](./src/assets/images/kebab.png)
 
-### **4**
+### **5**
 
 Hier angekommen klicken Sie dann auf LOAD UNPACKED und wählen den dist-Ordner aus. Die Chrome-Erweiterung sollte jetzt geladen und einsatzbereit sein.
 

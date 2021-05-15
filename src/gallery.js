@@ -1,4 +1,4 @@
-const itemtiles = document.getElementsByClassName('itemtile-body');
+let itemtiles = document.getElementsByClassName('itemtile-body');
 
 // Generating a Ribbon for each tile ==> should be each ads (exclude tiles that are not an ad)
 for (const tile of itemtiles) {
@@ -18,6 +18,16 @@ for (const x of mockProb) {
   const ran = Math.round(Math.random() * 100);
   x.innerHTML = `Scam: ${ran}%`;
   x.setAttribute('fraud-probability', ran);
+}
+itemtiles = document.getElementsByClassName('itemtile-header');
+for (const tile of itemtiles) {
+  const matches = tile.innerHTML.match(/[0-9]{9,}/);
+  const id = matches[0];
+  if (id !== 0 || id !== undefined) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', `http://localhost:4200/api/ads/${id}`, true);
+    xhr.send();
+  }
 }
 
 // Grabbing all the spans with fraud-probability

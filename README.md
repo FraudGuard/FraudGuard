@@ -21,20 +21,15 @@ FraudGuard is a browser extension which helps you to find potential scammer on e
 The goal of this project is to improve the experience with buying items on ebay Kleinanzeigen,
 by giving the user a securer environment.
 
+##
 - [Documentation](#documentation)
 - [Purpose & General Info](#purpose-&-general-info)
 - [Installation](./installation.md)
-- [Release History](#release-history)
+- [Release History](./CHANGELOG.md)
 - [Privacy policy](#privacy-policy)
 - [License](LICENSE)
 
-## Documentation
-
-## Purpose & General Info
-
-## Release History
-
-## License
+##
 
 This software is released under the terms of the GNU GPL v3 License.
 See the [LICENSE](LICENSE) file for further information.
