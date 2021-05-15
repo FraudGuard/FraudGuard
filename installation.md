@@ -22,6 +22,12 @@ Jetzt gehen Sie in ihren Chromebrowser und drücken oben rechts auf das Burger-M
 
 ### **5**
 
+Nun müssen Sie noch den "Entwickler modus" aktivieren, weil unsere App noch nicht im Chrome Store veröffentlicht ist.
+
+![mode](./src/assets/images/mode.png)
+
+### **6**
+
 Hier angekommen klicken Sie dann auf LOAD UNPACKED und wählen den dist-Ordner aus. Die Chrome-Erweiterung sollte jetzt geladen und einsatzbereit sein.
 
-![kebab](./src/assets/images/unpack.png)
+![unpack](./src/assets/images/unpack.png)
