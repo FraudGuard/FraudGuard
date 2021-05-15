@@ -1,16 +1,16 @@
 ### **1**
 
-Als Erstes besuchen Sie die Seite unseres Repositories indem sie "https://github.com/FraudGuard/FraudGuard" in ihrem Browser aufrufen.
+Als Erstes besuchen Sie die Seite unseres Repositories, indem Sie den Link "https://github.com/FraudGuard/FraudGuard" in ihrem Browser aufrufen.
 
 ### **2**
 
-Um die Chrome-Erweiterung zu Ihrem Browser hinzuzufügen, müssen Sie diese erst herunterladen. Dies machen Sie indem sie auf die neuste Version klicken.
+Um die Chrome-Erweiterung zu Ihrem Browser hinzuzufügen, müssen Sie diese erst herunterladen. Dies machen Sie indem Sie auf die neuste Version klicken.
 
 ![root](./src/assets/images/root.png)
 
 ### **3**
 
-Hier müssen Sie nun die Version für Ihr Betriebssystem herunterladen. Haben Sie das getan müssen Sie die heruntergeladene Datei jetzt noch auspacken.
+Hier müssen Sie nun die Version für Ihr Betriebssystem herunterladen. Anschließend müssen Sie die heruntergeladene Datei jetzt noch auspacken.
 
 ![releases](./src/assets/images/releases.png)
 
