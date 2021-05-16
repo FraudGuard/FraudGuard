@@ -1,3 +1,5 @@
+import setColor from './setColor';
+
 if (!document.getElementById('fraudModuleID')) {
   const aditems = document.getElementsByClassName('aditem-main--bottom');
 
@@ -10,7 +12,7 @@ if (!document.getElementById('fraudModuleID')) {
         .then((response) => response.json())
         .then((data) => {
           if (data.ad !== undefined) {
-            const score = Math.round(data.ad.fraud_score * 100);
+            const score = Math.round(data.ad.fraud_score);
 
             const fraudModule = document.createElement('p');
             fraudModule.className = 'text-module-end fraud-module';
@@ -21,15 +23,7 @@ if (!document.getElementById('fraudModuleID')) {
             fraudTag.setAttribute('fraud-tag', score);
             fraudTag.innerHTML = `Scam: ${score}%`;
 
-            if (score < 19) {
-              fraudTag.classList.add('green-tag');
-            } else if (score < 30 && score > 19) {
-              fraudTag.classList.add('yellow-tag');
-            } else if (score < 59 && score > 30) {
-              fraudTag.classList.add('orange-tag');
-            } else {
-              fraudTag.classList.add('red-tag');
-            }
+            setColor(score, fraudTag, 'tag');
 
             fraudModule.appendChild(fraudTag);
             aditem.appendChild(fraudModule);
