@@ -7,7 +7,7 @@ const sendData = () => {
   );
 
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', `http://localhost:4200/${id}`, true);
+  xhr.open('GET', `http://localhost:4200/api/fromDb/${id}`, true);
   xhr.send();
 };
 export default sendData;
