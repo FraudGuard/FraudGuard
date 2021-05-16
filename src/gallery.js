@@ -9,24 +9,22 @@ for (const tile of itemtiles) {
       .then((response) => response.json())
       .then((data) => {
         if (data.ad !== undefined) {
+          const score = Math.round(data.ad.fraud_score * 100);
+
           const fraudRibbon = document.createElement('div');
           fraudRibbon.className = 'fraud-ribbon';
 
           const fraudProbability = document.createElement('span');
           fraudProbability.className = 'fraud-probability';
 
-          fraudProbability.innerHTML = `Scam: ${data.ad.fraud_score}%`;
-          fraudProbability.setAttribute(
-            'fraud-probability',
-            data.ad.fraud_score,
-          );
+          fraudProbability.innerHTML = `Scam: ${score}%`;
+          fraudProbability.setAttribute('fraud-probability', score);
 
-          const fraudScore = fraudProbability.getAttribute('fraud-probability');
-          if (fraudScore < 19) {
+          if (score < 19) {
             fraudProbability.parentElement.classList.add('green');
-          } else if (fraudScore < 30 && fraudScore > 19) {
+          } else if (score < 30 && score > 19) {
             fraudProbability.parentElement.classList.add('yellow');
-          } else if (fraudScore < 59 && fraudScore > 30) {
+          } else if (score < 59 && score > 30) {
             fraudProbability.parentElement.classList.add('orange');
           } else {
             fraudProbability.parentElement.classList.add('red');

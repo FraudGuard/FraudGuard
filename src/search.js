@@ -10,22 +10,22 @@ if (!document.getElementById('fraudModuleID')) {
         .then((response) => response.json())
         .then((data) => {
           if (data.ad !== undefined) {
+            const score = Math.round(data.ad.fraud_score * 100);
+
             const fraudModule = document.createElement('p');
             fraudModule.className = 'text-module-end fraud-module';
             fraudModule.id = 'fraudModuleID';
 
             const fraudTag = document.createElement('span');
             fraudTag.className = 'simpletag tag-small fraud-tag';
-            fraudTag.setAttribute('fraud-tag', data.ad.fraud_score);
-            fraudTag.innerHTML = `Scam: ${data.ad.fraud_score}%`;
+            fraudTag.setAttribute('fraud-tag', score);
+            fraudTag.innerHTML = `Scam: ${score}%`;
 
-            const fraudScore = fraudTag.getAttribute('fraud-tag');
-
-            if (fraudScore < 19) {
+            if (score < 19) {
               fraudTag.classList.add('green-tag');
-            } else if (fraudScore < 30 && fraudScore > 19) {
+            } else if (score < 30 && score > 19) {
               fraudTag.classList.add('yellow-tag');
-            } else if (fraudScore < 59 && fraudScore > 30) {
+            } else if (score < 59 && score > 30) {
               fraudTag.classList.add('orange-tag');
             } else {
               fraudTag.classList.add('red-tag');
