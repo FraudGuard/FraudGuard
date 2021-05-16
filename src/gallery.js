@@ -12,6 +12,7 @@ for (const tile of itemtiles) {
   tile.appendChild(fraudRibbon);
 }
 
+// making request to the backend server and attach the score to the fraud-ribbon
 itemtiles = document.getElementsByClassName('itemtile-header');
 for (const tile of itemtiles) {
   const matches = tile.innerHTML.match(/[0-9]{9,}/);

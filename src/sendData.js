@@ -2,12 +2,17 @@ const sendData = () => {
   const id = parseInt(
     document
       .getElementById('viewad-extra-info')
-      .lastChild.previousSibling.textContent.split(' ', 2)[1],
+      ?.lastChild?.previousSibling?.textContent.split(' ', 2)[1],
     10,
   );
 
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', `http://localhost:4200/api/fromDb/${id}`, true);
-  xhr.send();
+  fetch(`http://localhost:4200/api/ads/${id}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json;charset=utf-8',
+    },
+    body: JSON.stringify(id),
+  });
 };
+
 export default sendData;

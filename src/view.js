@@ -17,5 +17,5 @@ if (!document.getElementById('fraudAdButton')) {
   fraudAd.appendChild(icon);
   fraudAd.appendChild(fraudContent);
   fraudContainer.appendChild(fraudAd);
-  document.getElementsByClassName('iconlist')[2].prepend(fraudContainer);
+  document.getElementsByClassName('iconlist')[2]?.prepend(fraudContainer);
 }
