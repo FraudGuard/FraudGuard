@@ -13,6 +13,7 @@ if (!document.getElementById('fraudAdButton')) {
 
   const fraudContent = document.createElement('span');
   fraudContent.innerHTML = 'Anzeige prüfen';
+  fraudContent.id = 'fraudContent';
 
   fraudAd.appendChild(icon);
   fraudAd.appendChild(fraudContent);
