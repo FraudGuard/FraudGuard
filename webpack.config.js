@@ -15,6 +15,7 @@ module.exports = {
         { from: 'src/assets/css', to: 'css' },
         { from: 'src/assets/html', to: 'html' },
         { from: 'manifest.json', to: 'manifest.json' },
+        { from: 'LICENSE', to: 'LICENSE' },
       ],
     }),
   ],

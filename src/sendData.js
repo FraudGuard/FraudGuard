@@ -1,5 +1,3 @@
-import setColor from './setColor';
-
 const sendData = () => {
   const id = parseInt(
     document
@@ -15,12 +13,20 @@ const sendData = () => {
 
       document.getElementById(
         'fraudContent',
-      ).innerHTML = `Fraud Score: ${score}%`;
+      ).innerHTML = `Fraud Score: ${score}`;
 
       const button = document.getElementById('fraudAdButton');
       button.disabled = true;
 
-      setColor(score, button);
+      if (score < 19) {
+        button.style.backgroundColor = 'green';
+      } else if (score < 30 && score > 19) {
+        button.style.backgroundColor = 'yellow';
+      } else if (score < 59 && score > 30) {
+        button.style.backgroundColor = 'orange';
+      } else {
+        button.style.backgroundColor = 'red';
+      }
     });
 };
 

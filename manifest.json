@@ -18,5 +18,10 @@
   "browser_action": {
     "default_popup": "./html/popup.html"
   },
-  "permissions": ["tabs", "https://www.ebay-kleinanzeigen.de/*"]
+  "permissions": [
+    "tabs",
+    "https://www.ebay-kleinanzeigen.de/*",
+    "webNavigation",
+    "https://www.ebay-kleinanzeigen.de/"
+  ]
 }
