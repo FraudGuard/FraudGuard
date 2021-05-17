@@ -16,17 +16,13 @@
 
 **An efficient Fraud-Detection add-on for ebay Kleinanzeigen. Fast, accurate, and lean.**
 
-FraudGuard is a browser extension which helps you to find potential scammer on ebay Kleinanzeigen by using a machine learning approach and natural language processing.
-
 The goal of this project is to improve the experience with buying items on ebay Kleinanzeigen,
 by giving the user a securer environment.
 
 ##
 - [Documentation](#documentation)
-- [Purpose & General Info](#purpose-&-general-info)
 - [Installation](./installation.md)
 - [Release History](./CHANGELOG.md)
-- [Privacy policy](#privacy-policy)
 - [License](LICENSE)
 
 ##
