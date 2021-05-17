@@ -8,7 +8,7 @@ if (!document.getElementById('fraudModuleID')) {
     const matches = aditem.parentElement.innerHTML.match(/[0-9]{9,}/);
     const id = matches[0];
     if (id !== 0 || id !== undefined || id !== null) {
-      fetch(`http://localhost:4200/api/ads/${id}`)
+      fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${id}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.ad !== undefined) {
@@ -16,12 +16,11 @@ if (!document.getElementById('fraudModuleID')) {
             fraudModule.className = 'text-module-end fraud-module';
             fraudModule.id = 'fraudModuleID';
 
+            const score = data.ad.fraud_score;
+
             const fraudTag = document.createElement('span');
             fraudTag.className = 'simpletag tag-small fraud-tag';
-            fraudTag.setAttribute('fraud-tag', data.ad.fraud_score);
-            fraudTag.innerHTML = `Score: ${data.ad.fraud_score}`;
-
-            const score = fraudTag.getAttribute('fraud-tag');
+            fraudTag.setAttribute('fraud-tag', score);
 
             setColor(score, fraudTag, 'tag');
 

@@ -8,18 +8,13 @@ const sendData = () => {
     10,
   );
 
-  fetch(`http://localhost:4200/api/analyze/${id}`)
+  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
     .then((response) => response.json())
     .then((data) => {
-      const score = Math.round(data.fraud_score);
-
-      document.getElementById(
-        'fraudContent',
-      ).innerHTML = `Fraud Score: ${score}`;
-
       const button = document.getElementById('fraudAdButton');
       button.disabled = true;
 
+      const score = data.fraud_score;
       setColor(score, button, 'button');
     });
 };
