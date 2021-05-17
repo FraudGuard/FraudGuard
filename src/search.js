@@ -1,3 +1,5 @@
+import setColor from './setColor';
+
 if (!document.getElementById('fraudModuleID')) {
   const aditems = document.getElementsByClassName('aditem-main--bottom');
 
@@ -21,15 +23,7 @@ if (!document.getElementById('fraudModuleID')) {
 
             const score = fraudTag.getAttribute('fraud-tag');
 
-            if (score < 19) {
-              fraudTag.classList.add('green-tag');
-            } else if (score < 30 && score > 19) {
-              fraudTag.classList.add('yellow-tag');
-            } else if (score < 59 && score > 30) {
-              fraudTag.classList.add('orange-tag');
-            } else {
-              fraudTag.classList.add('red-tag');
-            }
+            setColor(score, fraudTag, 'tag');
 
             fraudModule.appendChild(fraudTag);
             aditem.appendChild(fraudModule);
