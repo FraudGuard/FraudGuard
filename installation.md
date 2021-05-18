@@ -28,6 +28,6 @@ Nun musst du noch den "Entwicklermodus" aktivieren, weil unsere App noch nicht i
 
 ### **6**
 
-Hier angekommen klickst du dann auf "Entpackte Erweiterung laden" und wählen den dist-Ordner aus. Die Chrome-Erweiterung sollte jetzt geladen und einsatzbereit sein.
+Hier angekommen, klickst du dann auf "Entpackte Erweiterung laden" und wählst den dist-Ordner aus. Die Chrome-Erweiterung sollte jetzt geladen und einsatzbereit sein.
 
 ![unpack](./src/assets/images/unpack.png)
