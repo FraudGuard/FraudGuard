@@ -34,22 +34,22 @@ Hier angekommen, klickst du dann auf "Entpackte Erweiterung laden" und wählst d
 
 ### **7**
 
-Sobald du jetzt auf der eBay-Kleinanzeigen Webseite wechselst, werden die Anzeigen, welche wir bereits in der Datenbank gespeichert haben, mit einer Wahrscheinlichkeit markiert.
-
-![tags](./src/assets/images/tags.png)
-
-### **8**
-
-Wenn du eine Anzeige siehst, die noch keine Markierung hat, kannst du auf diese klicken und auf den "Anzeige prüfen" Knopf drücken, um die Betrugswahrscheinlichkeit angezeigt zu lassen. 
-Hinweis: Das kann manchmal ein bisschen länger dauern, weil unser Server nach zu langer Inaktivität in den Ruhemodus schaltet.
-
-![button](./src/assets/images/button.png)
-
-Nachdem du den Knopf gedrückt hast, wird die analysierte Anzeigen in vier Kategorien eingestuft:
+Sobald du jetzt auf der eBay-Kleinanzeigen Webseite wechselst, werden die Anzeigen, welche wir bereits in der Datenbank gespeichert haben, mit einer Wahrscheinlichkeit markiert. Die analysierten Anzeigen werden in vier Kategorien eingestuft:
 
 - Unwahrscheinlich,
 - geringe wahrscheinlichkeit,
 - wahrscheinlich,
 - sehr wahrscheinlich,
+
+![tags](./src/assets/images/tags.png)
+
+### **8**
+
+Wenn du eine Anzeige siehst, die noch keine Markierung hat, kannst du auf diese klicken und auf den "Anzeige prüfen" Knopf drücken, um die Betrugswahrscheinlichkeit angezeigt zu lassen.
+Hinweis: Das kann manchmal ein bisschen länger dauern, weil unser Server nach zu langer Inaktivität in den Ruhemodus schaltet.
+
+![button](./src/assets/images/button.png)
+
+Nachdem du den Knopf gedrückt hast, wird die analysierte Anzeigen in einer der vier Kategorien eingestuft.
 
 ![analyze](./src/assets/images/analyze.png)
