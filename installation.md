@@ -10,7 +10,7 @@ Um die Chrome-Erweiterung zu deinem Browser hinzuzufügen, musst du diese erst h
 
 ### **3**
 
-Hier musst du nun die Version für dein Betriebssystem herunterladen. Anschließend musst du die heruntergeladene Datei jetzt noch auspacken.
+Hier musst du nun die Version für dein Betriebssystem herunterladen. Anschließend musst du die heruntergeladene Datei jetzt noch entpacken.
 
 ![releases](./src/assets/images/releases.png)
 
@@ -22,7 +22,7 @@ Jetzt gehst du in deinen Chromebrowser und drückst oben rechts auf das Burger-M
 
 ### **5**
 
-Nun musst du noch den "Entwickler modus" aktivieren, weil unsere App noch nicht im Chrome Store veröffentlicht ist.
+Nun musst du noch den "Entwicklermodus" aktivieren, weil unsere App noch nicht im Chrome Store veröffentlicht ist.
 
 ![mode](./src/assets/images/mode.png)
 
