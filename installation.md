@@ -34,10 +34,10 @@ Hier angekommen, klickst du dann auf "Entpackte Erweiterung laden" und wählst d
 
 ### **7**
 
-Sobald du jetzt auf der eBay-Kleinanzeigen Webseite wechselst, werden die Anzeigen, welche wir bereits in der Datenbank gespeichert haben, mit einer Wahrscheinlichkeit markiert. Die analysierten Anzeigen werden in vier Kategorien eingestuft:
+Sobald du jetzt auf die eBay-Kleinanzeigen Webseite wechselst, werden die Anzeigen, welche wir bereits in der Datenbank gespeichert haben, mit einer Wahrscheinlichkeit markiert. Die analysierten Anzeigen werden in vier Kategorien eingestuft:
 
 - Unwahrscheinlich,
-- geringe wahrscheinlichkeit,
+- geringe Wahrscheinlichkeit,
 - wahrscheinlich,
 - sehr wahrscheinlich,
 
@@ -51,5 +51,6 @@ Hinweis: Das kann manchmal ein bisschen länger dauern, weil unser Server nach z
 ![button](./src/assets/images/button.png)
 
 Nachdem du den Knopf gedrückt hast, wird die analysierte Anzeigen in einer der vier Kategorien eingestuft.
+Hinweis: bisher wird die Auswertung des Scores noch nicht abgespeichert - wenn du also die Seite neu läds ist das Ergebnis leider nicht mehr da :( (das wollen wir aber noch angehen)
 
 ![analyze](./src/assets/images/analyze.png)
