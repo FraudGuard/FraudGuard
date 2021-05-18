@@ -1,6 +1,6 @@
 const wahrscheinlichkeiten = {
   1: 'Unwahrscheinlich',
-  2: 'nicht wahrscheinlich',
+  2: 'geringe wahrscheinlichkeit',
   3: 'wahrscheinlich',
   4: 'sehr wahrscheinlich',
 };

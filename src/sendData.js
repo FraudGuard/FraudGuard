@@ -8,7 +8,7 @@ const sendData = () => {
     10,
   );
 
-  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
+  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/fromDb/${id}`)
     .then((response) => response.json())
     .then((data) => {
       const button = document.getElementById('fraudAdButton');
