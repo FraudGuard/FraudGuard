@@ -51,6 +51,5 @@ Hinweis: Das kann manchmal ein bisschen länger dauern, weil unser Server nach z
 ![button](./src/assets/images/button.png)
 
 Nachdem du den Knopf gedrückt hast, wird die analysierte Anzeigen in einer der vier Kategorien eingestuft.
-Hinweis: bisher wird die Auswertung des Scores noch nicht abgespeichert - wenn du also die Seite neu läds ist das Ergebnis leider nicht mehr da :( (das wollen wir aber noch angehen)
-
+Hinweis: bisher wird die Auswertung des Scores noch nicht abgespeichert - wenn du also die Seite neu läds, ist das Ergebnis leider nicht mehr da :(
 ![analyze](./src/assets/images/analyze.png)
