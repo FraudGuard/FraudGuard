@@ -10,7 +10,7 @@ Um die Chrome-Erweiterung zu deinem Browser hinzuzufügen, musst du diese erst h
 
 ### **3**
 
-Hier musst du nun die Version für dein Betriebssystem herunterladen. Anschließend musst du die heruntergeladene Zip Datei jetzt noch entpacken.
+Hier musst du nun die Version für dein Betriebssystem herunterladen. Anschließend musst du die heruntergeladene Zip-Datei jetzt noch entpacken.
 
 ![releases](./src/assets/images/releases.png)
 
@@ -28,7 +28,7 @@ Nun musst du noch den "Entwicklermodus" aktivieren, weil unsere App noch nicht i
 
 ### **6**
 
-Hier angekommen, klickst du dann auf "Entpackte Erweiterung laden" und wählst den dist-Ordner aus. Die Chrome-Erweiterung sollte jetzt geladen und einsatzbereit sein.
+Hier angekommen, klickst du dann auf "Entpackte Erweiterung laden" und wählst den Ordner mit der Bennenung "dist" aus, der in der Zip-Datei enthalten ist. Die Chrome-Erweiterung sollte jetzt geladen und einsatzbereit sein.
 
 ![unpack](./src/assets/images/unpack.png)
 
