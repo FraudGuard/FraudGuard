@@ -3,7 +3,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: {
     background: ['babel-polyfill', './src/background.js'],
-    main: './src/entry.js',
+    main: './src/index.js',
   },
   output: {
     filename: '[name].bundle.js',

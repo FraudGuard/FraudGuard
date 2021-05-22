@@ -1,0 +1,22 @@
+{
+  "tags": {
+    "allowUnknownTags": ["optional"]
+  },
+  "source": {
+    "include": ["src/"],
+    "includePattern": "\\.(js|ts)$"
+  },
+  "plugins": ["node_modules/better-docs/typescript"],
+  "opts": {
+    "encoding": "utf8",
+    "destination": "docs/",
+    "recurse": true,
+    "verbose": true
+  },
+  "templates": {
+    "better-docs": {
+      "name": "FraudGuard-Extension Documentation",
+      "logo": "src/assets/images/logo.png"
+    }
+  }
+}

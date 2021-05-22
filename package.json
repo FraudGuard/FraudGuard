@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf ./dist && webpack --mode production",
     "prettier": "npx prettier --write src/**/*.js",
-    "linter": "npx eslint src/**/*.js -c ./.eslintrc.yml --fix"
+    "linter": "npx eslint src/**/*.js -c ./.eslintrc.yml --fix",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -30,12 +31,15 @@
     "babel-preset-env": "^1.7.0",
     "copy-webpack-plugin": "^8.1.1",
     "css-loader": "^5.2.3",
+    "docdash": "^1.2.0",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-import": "^2.22.1",
     "husky": "^6.0.0",
+    "jsdoc": "^3.6.7",
+    "jsdoc-to-markdown": "^7.0.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "style-loader": "^2.0.0",

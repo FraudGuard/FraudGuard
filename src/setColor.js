@@ -6,6 +6,13 @@ const wahrscheinlichkeiten = {
 };
 
 /* eslint-disable no-param-reassign */
+/**
+ * Assigns a color to the given HTMLElement based on the score and the style which is chosen.
+ *
+ * @param {number} - score
+ * @param {HTMLElement} - HMTLElement that gets modified
+ * @param {string} - Style of the HMTLElement (button, tag or gallery)
+ */
 const setColor = (score, mount, style) => {
   if (style === 'button') {
     if (score < -30) {
