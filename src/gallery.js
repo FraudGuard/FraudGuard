@@ -14,7 +14,7 @@ for (const tile of itemtiles) {
       .then((response) => response.json())
       .then((data) => {
         if (data.ad !== undefined) {
-        // if (data.fraud_score) {
+          // if (data.fraud_score) {
           const score = data.fraud_score;
 
           const fraudRibbon = document.createElement('div');

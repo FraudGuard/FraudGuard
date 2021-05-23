@@ -16,7 +16,7 @@ if (!document.getElementById('fraudModuleID')) {
         .then((response) => response.json())
         .then((data) => {
           if (data.ad !== undefined) {
-          // if (data?.fraud_score) {
+            // if (data?.fraud_score) {
             const fraudModule = document.createElement('p');
             fraudModule.className = 'text-module-end fraud-module';
             fraudModule.id = 'fraudModuleID';
