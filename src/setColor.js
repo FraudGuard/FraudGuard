@@ -44,20 +44,20 @@ const setColor = (score, mount, style) => {
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
     }
   } else if (style === 'gallery') {
-    console.log(mount)
-      if (score < -30) {
-        mount.classList.add('green');
-        mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
-      } else if (score > -30 && score < 10) {
-        mount.classList.add('yellow');
-        mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
-      } else if (score > 10 && score < 40) {
-        mount.classList.add('orange');
-        mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
-      } else {
-        mount.classList.add('red');
-        mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
-      }
+    console.log(mount);
+    if (score < -30) {
+      mount.classList.add('green');
+      mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
+    } else if (score > -30 && score < 10) {
+      mount.classList.add('yellow');
+      mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
+    } else if (score > 10 && score < 40) {
+      mount.classList.add('orange');
+      mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
+    } else {
+      mount.classList.add('red');
+      mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
+    }
   } else {
     // eslint-disable-next-line no-console
     console.log('setColor parameter "style" doesnt match');
