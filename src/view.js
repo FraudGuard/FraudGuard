@@ -1,5 +1,9 @@
 import sendData from './sendData';
 
+/**
+ * Erstellt auf der Ansichtsseite einer Anzeige den "Anzeige prüfen" Knopf. Dem Knopf wird das onClick Event sendData zugewiesen
+ *
+ */
 if (!document.getElementById('fraudAdButton')) {
   const fraudContainer = document.createElement('li');
 

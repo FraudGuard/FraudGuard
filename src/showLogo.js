@@ -1,3 +1,8 @@
+/**
+ * Injeziert in den Quellcode von eBay das Logo von FraudGuard
+ *
+ */
+
 const link = document.createElement('a');
 const logo = document.createElement('img');
 

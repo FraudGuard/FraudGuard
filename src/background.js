@@ -1,4 +1,8 @@
 /* eslint-disable no-undef */
+/**
+ * Injeziert die Style-sheets und JavaScript sobald die Seite vollständig geladen ist
+ *
+ */
 chrome.webNavigation.onCompleted.addListener((tab) => {
   if (tab.frameId === 0) {
     chrome.tabs.get(tab.tabId, (currentTabInfo) => {

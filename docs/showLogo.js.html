@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: showLogo.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,38 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: showLogo.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Injeziert in den Quellcode von eBay das Logo von FraudGuard
+ *
+ */
 
+const link = document.createElement('a');
+const logo = document.createElement('img');
 
-    <h3> </h3>
+link.href = 'https://github.com/FraudGuard/FraudGuard';
 
+logo.src =
+  'https://avatars.githubusercontent.com/u/68067715?s=40&amp;u=33674b40df5283e3db2731cb4f14531cc8217690&amp;v=4';
 
+const ebay = document.getElementById('site-logo');
 
+ebay.style.display = 'flex';
+ebay.style.flexDirection = 'row';
 
-
-
-
-
-
-
-    
-
-
-
-
-
+link.appendChild(logo);
+ebay.appendChild(link);
+</code></pre>
+        </article>
+    </section>
 
 
 

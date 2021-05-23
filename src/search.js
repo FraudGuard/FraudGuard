@@ -1,5 +1,9 @@
 import setColor from './setColor';
 
+/**
+ * Macht Anfrage an jede Anzeige auf der eBay-Kleinanzeigen Startseite und erstellt für diese Tags auf den dann der Score abgebildet wird. Die Tags werden nur erstellt wenn wir die Anzeigen in unserer Datenbank haben
+ *
+ */
 if (!document.getElementById('fraudModuleID')) {
   const aditems = document.getElementsByClassName('aditem-main--bottom');
 

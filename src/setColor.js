@@ -7,7 +7,7 @@ const wahrscheinlichkeiten = {
 
 /* eslint-disable no-param-reassign */
 /**
- * Assigns a color to the given HTMLElement based on the score and the style which is chosen.
+ * Ordnet den gegebenen HTMLElement eine Farbe zu, basierend auf den Score und des Styles.
  *
  * @param {number} - score
  * @param {HTMLElement} - HMTLElement that gets modified

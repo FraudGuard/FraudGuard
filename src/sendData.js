@@ -1,5 +1,9 @@
 import setColor from './setColor';
 
+/**
+ * Funktion die auf der Ansichtsseite einer Anzeige beim drücken des "Anzeigen prüfen" Knopfes ausgeführt wird. Es wird die Id der Anzeige ausgelesen und mit dieser dann ein Request auf den Analyze-Service gemacht
+ *
+ */
 const sendData = () => {
   const id = parseInt(
     document

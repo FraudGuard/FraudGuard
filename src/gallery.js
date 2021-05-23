@@ -2,7 +2,10 @@ import setColor from './setColor';
 
 const itemtiles = document.getElementsByClassName('itemtile-body');
 
-// Making request to every ad, if(data.ad !== undefined) generating a ribbon for each tile ==> should be each ads (exclude tiles that are not an ad)
+/**
+ * Macht Anfrage an jede Anzeige auf der eBay-Kleinanzeigen Startseite und erstellt für diese Bänder auf den dann der Score abgebildet wird. Die Bänder werden nur erstellt wenn wir die Anzeigen in unserer Datenbank haben
+ *
+ */
 for (const tile of itemtiles) {
   const matches = tile.innerHTML.match(/[0-9]{9,}/);
   const id = matches[0];
@@ -27,11 +30,4 @@ for (const tile of itemtiles) {
         tile.appendChild(fraudRibbon);
       }
     });
-}
-
-// Remove probabilities on ads that dont have a price
-for (const item of itemtiles) {
-  if (item.childElementCount === 3) {
-    item.removeChild(item.lastChild);
-  }
 }
