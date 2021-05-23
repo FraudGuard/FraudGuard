@@ -44,7 +44,6 @@ const setColor = (score, mount, style) => {
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
     }
   } else if (style === 'gallery') {
-    console.log(mount)
       if (score < -30) {
         mount.classList.add('green');
         mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
