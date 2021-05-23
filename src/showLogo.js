@@ -1,5 +1,5 @@
 /**
- * Injeziert in den Quellcode von eBay das Logo von FraudGuard
+ * Injiziert in den Quellcode von eBay das Logo von FraudGuard
  *
  */
 

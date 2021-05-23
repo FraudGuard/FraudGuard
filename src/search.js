@@ -16,11 +16,13 @@ if (!document.getElementById('fraudModuleID')) {
         .then((response) => response.json())
         .then((data) => {
           if (data.ad !== undefined) {
+          // if (data?.fraud_score) {
             const fraudModule = document.createElement('p');
             fraudModule.className = 'text-module-end fraud-module';
             fraudModule.id = 'fraudModuleID';
 
             const score = data.ad.fraud_score;
+            // const score = data.fraud_score;
 
             const fraudTag = document.createElement('span');
             fraudTag.className = 'simpletag tag-small fraud-tag';
