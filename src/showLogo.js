@@ -13,7 +13,7 @@ logo.src =
 
 const ebay = document.getElementsByClassName('logo')[0];
 
-ebay.style.marginLeft = '250px';
+logo.style.marginLeft = '250px';
 
 link.appendChild(logo);
 ebay.appendChild(link);
