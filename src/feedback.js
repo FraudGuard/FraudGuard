@@ -20,8 +20,11 @@ const sendFeedback = () => {
     body: raw,
     redirect: 'follow',
   };
-  // fetch("https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/1666030462/comment", requestOptions)
-  fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions);
+  fetch(
+    'https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/1666030462/comment',
+    requestOptions,
+  );
+  // fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions);
 
   closeFeedback();
 };
