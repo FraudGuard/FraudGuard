@@ -107,7 +107,7 @@
   border: 1px solid black;
 }
 
-#input {
+#fraudAdButton {
   position: relative;
 }
 
@@ -116,7 +116,7 @@
   padding: 10px;
 }
 
-#input:hover .tooltip {
+#fraudAdButton:hover .tooltip {
   display: block;
   border: 1px solid black;
 }

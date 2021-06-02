@@ -1,4 +1,3 @@
-// import { openFeedback, closeFeedback } from './feedback';
 import { openFeedback } from './feedback';
 
 const wahrscheinlichkeiten = {
@@ -12,9 +11,6 @@ const infoIcon = document.createElement('i');
 infoIcon.className = 'button-icon icon-info-black openBTN';
 infoIcon.addEventListener('click', openFeedback);
 
-// const closeFeedbackBtn = document.getElementById('closeBTN');
-// closeFeedbackBtn.addEventListener('click', closeFeedback);
-
 const tooltip = document.getElementsByClassName('tooltip')[0];
 
 /* eslint-disable no-param-reassign */
@@ -25,7 +21,7 @@ const tooltip = document.getElementsByClassName('tooltip')[0];
  * @param {HTMLElement} - HMTLElement that gets modified
  * @param {string} - Style of the HMTLElement (button, tag or gallery)
  */
-const setColor = (score, mount, style) => {
+const setColor = async (score, mount, style) => {
   if (style === 'button') {
     if (score < -30) {
       mount.style.backgroundColor = 'green';

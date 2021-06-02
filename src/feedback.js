@@ -9,8 +9,8 @@ const sendFeedback = () => {
   myHeaders.append('Content-Type', 'application/json');
 
   const raw = JSON.stringify({
-    comment: `${document.getElementById('feedback').innerHTML} ${
-      document.getElementById('nameInput').innerHTML
+    comment: `${document.getElementById('feedback').value} ${
+      document.getElementById('nameInput').value
     }`,
   });
 
@@ -21,10 +21,7 @@ const sendFeedback = () => {
     redirect: 'follow',
   };
   // fetch("https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/1666030462/comment", requestOptions)
-  fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions)
-    .then((response) => response.text())
-    .then((result) => console.log(result))
-    .catch((error) => console.log('error', error));
+  fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions);
 
   closeFeedback();
 };
@@ -77,7 +74,7 @@ const openFeedback = () => {
     feedbackInput.id = 'feedback';
     feedbackInput.autocomplete = 'off';
     feedbackInput.name = 'feedbackStr';
-    feedbackInput.placeholder = 'Dein Name';
+    feedbackInput.placeholder = 'Dein Feedback';
     feedbackInput.tabindex = '3';
     feedbackInput.title = '';
     feedbackInput.value = '';
