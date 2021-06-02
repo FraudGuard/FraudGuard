@@ -66,6 +66,9 @@ const openFeedback = () => {
     nameInput.title = '';
     nameInput.type = 'text';
     nameInput.value = '';
+    nameInput.style.border = 'black solid 1px';
+    nameInput.style.borderRadius = '8px';
+    nameInput.style.padding = '6px 12px';
 
     const feedbackInput = document.createElement('textarea');
     feedbackInput.classList.add('splitfield-input');
@@ -88,8 +91,9 @@ const openFeedback = () => {
     overlayContent.appendChild(headline);
     overlayContent.appendChild(text);
     overlayContent.appendChild(closeBTN);
-    overlayContent.appendChild(document.createElement('br'));
     overlayContent.appendChild(nameInput);
+    overlayContent.appendChild(document.createElement('br'));
+    overlayContent.appendChild(document.createElement('br'));
     overlayContent.appendChild(feedbackInput);
     overlayContent.appendChild(document.createElement('br'));
     overlayContent.appendChild(sendFeedbackBTN);
