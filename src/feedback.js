@@ -21,7 +21,7 @@ const sendFeedback = () => {
     redirect: 'follow',
   };
   fetch(
-    'https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/1666030462/comment',
+    `https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}/comment`,
     requestOptions,
   );
   // fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions);
