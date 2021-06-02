@@ -1,7 +1,7 @@
-import sendData from './sendData';
+import getData from './getData';
 
 /**
- * Erstellt auf der Ansichtsseite einer Anzeige den "Anzeige prüfen" Knopf. Dem Knopf wird das onClick Event sendData zugewiesen
+ * Erstellt auf der Ansichtsseite einer Anzeige den "Anzeige prüfen" Knopf. Dem Knopf wird das onClick Event getData zugewiesen
  *
  */
 if (!document.getElementById('fraudAdButton')) {
@@ -10,7 +10,7 @@ if (!document.getElementById('fraudAdButton')) {
   fraudContainer.id = 'input';
 
   const button = document.createElement('button');
-  button.addEventListener('click', sendData);
+  button.addEventListener('click', getData);
   button.className = 'button-ghost full-width taller';
   button.style.backgroundColor = '#86B817';
   button.style.color = 'white';

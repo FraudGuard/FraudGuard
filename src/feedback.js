@@ -1,0 +1,102 @@
+import getId from './getId';
+
+const closeFeedback = () => {
+  document.getElementById('overlay').remove();
+};
+
+const sendFeedback = () => {
+  const myHeaders = new Headers();
+  myHeaders.append('Content-Type', 'application/json');
+
+  const raw = JSON.stringify({
+    comment: `${document.getElementById('feedback').innerHTML} ${
+      document.getElementById('nameInput').innerHTML
+    }`,
+  });
+
+  const requestOptions = {
+    method: 'PATCH',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow',
+  };
+  // fetch("https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/1666030462/comment", requestOptions)
+  fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions)
+    .then((response) => response.text())
+    .then((result) => console.log(result))
+    .catch((error) => console.log('error', error));
+
+  closeFeedback();
+};
+
+const openFeedback = () => {
+  if (!document.getElementById('overlay')) {
+    const overlay = document.createElement('div');
+    overlay.classList.add('login-overlay');
+    overlay.id = 'overlay';
+
+    const overlayContent = document.createElement('div');
+    overlayContent.classList.add('login-overlay--content');
+
+    const headline = document.createElement('span');
+    headline.classList.add('headline-big');
+    headline.innerHTML = 'Hallo!';
+
+    const text = document.createElement('p');
+    text.innerHTML =
+      'Danke, dass du FraudGuard verbessern möchtest. Bitte teile uns mit, was wir besser machen können :)';
+
+    const closeBTN = document.createElement('a');
+    closeBTN.addEventListener('click', closeFeedback);
+    closeBTN.classList.add('j-overlay-close');
+    closeBTN.classList.add('overlay-close');
+    closeBTN.id = 'closeBTN';
+    closeBTN.title = 'Close (Esc)';
+    closeBTN.type = 'button';
+
+    const nameInput = document.createElement('input');
+    nameInput.autocomplete = 'off';
+    nameInput.classList.add('splitfield-input');
+    nameInput.classList.add('is-not-clearable');
+    nameInput.classList.add('feedback-input');
+    nameInput.id = 'nameInput';
+    nameInput.name = 'nameStr';
+    nameInput.placeholder = 'Dein Name';
+    nameInput.tabindex = '3';
+    nameInput.title = '';
+    nameInput.type = 'text';
+    nameInput.value = '';
+
+    const feedbackInput = document.createElement('textarea');
+    feedbackInput.classList.add('splitfield-input');
+    feedbackInput.classList.add('is-not-clearable');
+    feedbackInput.classList.add('feedback-input');
+    feedbackInput.id = 'feedback';
+    feedbackInput.autocomplete = 'off';
+    feedbackInput.name = 'feedbackStr';
+    feedbackInput.placeholder = 'Dein Name';
+    feedbackInput.tabindex = '3';
+    feedbackInput.title = '';
+    feedbackInput.value = '';
+
+    const sendFeedbackBTN = document.createElement('button');
+    sendFeedbackBTN.addEventListener('click', sendFeedback);
+    sendFeedbackBTN.id = 'btnFeedback';
+    sendFeedbackBTN.innerHTML = 'Feedback senden!';
+    sendFeedbackBTN.title = 'senden';
+
+    overlayContent.appendChild(headline);
+    overlayContent.appendChild(text);
+    overlayContent.appendChild(closeBTN);
+    overlayContent.appendChild(document.createElement('br'));
+    overlayContent.appendChild(nameInput);
+    overlayContent.appendChild(feedbackInput);
+    overlayContent.appendChild(document.createElement('br'));
+    overlayContent.appendChild(sendFeedbackBTN);
+    overlay.appendChild(overlayContent);
+
+    document.getElementById('input').appendChild(overlay);
+  }
+};
+
+export { openFeedback, sendFeedback };
