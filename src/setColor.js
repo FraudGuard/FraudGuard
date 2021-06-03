@@ -2,7 +2,7 @@ import { openFeedback } from './feedback';
 
 const wahrscheinlichkeiten = {
   1: 'Unwahrscheinlich &nbsp;&nbsp;',
-  2: 'geringe wahrscheinlichkeit &nbsp;&nbsp;',
+  2: 'geringe Wahrscheinlichkeit &nbsp;&nbsp;',
   3: 'wahrscheinlich &nbsp;&nbsp;',
   4: 'sehr wahrscheinlich &nbsp;&nbsp;',
 };
@@ -10,8 +10,6 @@ const wahrscheinlichkeiten = {
 const infoIcon = document.createElement('i');
 infoIcon.className = 'button-icon icon-info-black openBTN';
 infoIcon.addEventListener('click', openFeedback);
-
-const tooltip = document.getElementsByClassName('tooltip')[0];
 
 /* eslint-disable no-param-reassign */
 /**
@@ -22,6 +20,7 @@ const tooltip = document.getElementsByClassName('tooltip')[0];
  * @param {string} - Style of the HMTLElement (button, tag or gallery)
  */
 const setColor = async (score, mount, style) => {
+  const tooltip = document.getElementById('tooltip');
   if (style === 'button') {
     if (score < -30) {
       mount.style.backgroundColor = 'green';
@@ -31,7 +30,7 @@ const setColor = async (score, mount, style) => {
         tooltip.style.backgroundColor = 'green';
         tooltip.style.color = 'white';
       }
-    } else if (score > -30 && score < 10) {
+    } else if (score >= -30 && score < 20) {
       mount.style.backgroundColor = 'yellow';
       mount.style.color = 'black';
       mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
@@ -40,7 +39,7 @@ const setColor = async (score, mount, style) => {
         tooltip.style.backgroundColor = 'yellow';
         tooltip.style.color = 'black';
       }
-    } else if (score > 10 && score < 40) {
+    } else if (score >= 20 && score < 40) {
       mount.style.backgroundColor = 'orange';
       mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
       mount.appendChild(infoIcon);
