@@ -12,7 +12,7 @@ const getData = () => {
   button.disabled = true;
 
   // fetch(`http://localhost:4200/api/analyze/${getId()}`)
-    fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
+  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.beschreibung) {
