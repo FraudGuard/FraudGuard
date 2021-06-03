@@ -27,25 +27,33 @@ const setColor = async (score, mount, style) => {
       mount.style.backgroundColor = 'green';
       mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
       mount.appendChild(infoIcon);
-      tooltip.style.backgroundColor = 'green';
-      tooltip.style.color = 'white';
+      if (tooltip) {
+        tooltip.style.backgroundColor = 'green';
+        tooltip.style.color = 'white';
+      }
     } else if (score > -30 && score < 10) {
       mount.style.backgroundColor = 'yellow';
       mount.style.color = 'black';
       mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
       mount.appendChild(infoIcon);
-      tooltip.style.backgroundColor = 'yellow';
-      tooltip.style.color = 'black';
+      if (tooltip) {
+        tooltip.style.backgroundColor = 'yellow';
+        tooltip.style.color = 'black';
+      }
     } else if (score > 10 && score < 40) {
       mount.style.backgroundColor = 'orange';
       mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
       mount.appendChild(infoIcon);
-      tooltip.style.backgroundColor = 'orange';
+      if (tooltip) {
+        tooltip.style.backgroundColor = 'orange';
+      }
     } else {
       mount.style.backgroundColor = 'red';
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
       mount.appendChild(infoIcon);
-      tooltip.style.backgroundColor = 'red';
+      if (tooltip) {
+        tooltip.style.backgroundColor = 'red';
+      }
     }
   } else if (style === 'tag') {
     if (score < -30) {
