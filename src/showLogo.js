@@ -9,7 +9,10 @@ const logo = document.createElement('img');
 link.href = 'https://github.com/FraudGuard/FraudGuard';
 
 logo.src =
-  'https://avatars.githubusercontent.com/u/68067715?s=40&u=33674b40df5283e3db2731cb4f14531cc8217690&v=4';
+  'https://avatars.githubusercontent.com/u/83354594?s=200&v=4';
+
+  logo.width = "70";
+  logo.height= "70";
 
 const ebay = document.getElementsByClassName('logo')[0];
 
