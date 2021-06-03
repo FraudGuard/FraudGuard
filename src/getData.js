@@ -11,8 +11,8 @@ const getData = () => {
   button.children[1].innerHTML = 'Wird geladen';
   button.disabled = true;
 
-  fetch(`http://localhost:4200/api/analyze/${getId()}`)
-    // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
+  // fetch(`http://localhost:4200/api/analyze/${getId()}`)
+    fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.beschreibung) {
