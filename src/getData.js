@@ -15,14 +15,16 @@ const getData = () => {
   fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
     .then((response) => response.json())
     .then((data) => {
-      const tooltip = document.createElement('span');
-      tooltip.innerHTML = data.beschreibung;
-      tooltip.className = 'tooltip';
-      tooltip.style.zIndex = '0';
-      tooltip.id = 'tooltip';
+      if (data?.beschreibung) {
+        const tooltip = document.createElement('span');
+        tooltip.innerHTML = data.beschreibung;
+        tooltip.className = 'tooltip';
+        tooltip.style.zIndex = '0';
+        tooltip.id = 'tooltip';
 
-      const input = document.getElementById('input');
-      input.appendChild(tooltip);
+        const input = document.getElementById('input');
+        input.appendChild(tooltip);
+      }
 
       const score = data.fraud_score;
       setColor(score, button, 'button');

@@ -1,4 +1,6 @@
 import getData from './getData';
+import getId from './getId';
+import setColor from './setColor';
 
 /**
  * Erstellt auf der Ansichtsseite einer Anzeige den "Anzeige prüfen" Knopf. Dem Knopf wird das onClick Event getData zugewiesen
@@ -22,6 +24,16 @@ if (!document.getElementById('fraudAdButton')) {
   const fraudContent = document.createElement('span');
   fraudContent.innerHTML = 'Anzeige prüfen';
   fraudContent.id = 'fraudContent';
+
+  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${getId()}`)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.ad !== undefined) {
+        const score = data.ad.fraud_score;
+
+        setColor(score, button, 'button');
+      }
+    });
 
   button.appendChild(icon);
   button.appendChild(fraudContent);
