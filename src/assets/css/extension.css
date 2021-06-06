@@ -124,3 +124,8 @@
 .feedback-input {
   border: 1px solid black;
 }
+
+.login-overlay {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}

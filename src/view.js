@@ -35,6 +35,7 @@ if (
         const score = data.ad.fraud_score;
 
         setColor(score, button, 'button');
+        button.disabled = true;
       }
     });
 

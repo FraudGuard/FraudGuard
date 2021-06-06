@@ -10,12 +10,13 @@ link.href = 'https://github.com/FraudGuard/FraudGuard';
 
 logo.src = 'https://avatars.githubusercontent.com/u/83354594?s=200&v=4';
 
-logo.width = '70';
-logo.height = '70';
+logo.width = '100';
+logo.height = '100';
 
-const ebay = document.getElementsByClassName('logo')[0];
+const ebay = document.getElementById('site-logo');
 
-logo.style.marginLeft = '250px';
+logo.style.margin = '0px 0px 50px 350px';
+logo.style.position = 'absolute';
 
 link.appendChild(logo);
-ebay.appendChild(link);
+ebay.insertBefore(link, ebay.childNodes[0]);
