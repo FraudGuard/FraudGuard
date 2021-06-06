@@ -12,7 +12,8 @@ for (const aditem of aditems) {
   const id = matches[0];
 
   const getD = () => {
-    fetch(`http://localhost:4200/api/analyze/${id}`)
+    // fetch(`http://localhost:4200/api/analyze/${id}`)
+    fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
       .then((response) => response.json())
       .then((d) => {
         if (d.ad !== undefined) {
@@ -31,8 +32,8 @@ for (const aditem of aditems) {
   };
 
   if (id !== 0 || id !== undefined) {
-    fetch(`http://localhost:4200/api/ads/${id}`)
-      // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${id}`)
+    // fetch(`http://localhost:4200/api/ads/${id}`)
+    fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.ad !== undefined) {

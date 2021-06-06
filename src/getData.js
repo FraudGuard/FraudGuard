@@ -7,9 +7,14 @@ import getId from './getId';
  */
 const getData = () => {
   const button = document.getElementById('fraudAdButton');
+  const icon = document.createElement('img');
   button.style.backgroundColor = 'lightgray';
   button.children[1].innerHTML = 'Wird geladen';
   button.disabled = true;
+
+  icon.src = 'https://loading.io/65777740-76ae-4724-ae02-478a21e1f8fc';
+
+  button.replaceChild(icon, document.getElementById('analyzeIcon'));
 
   // fetch(`http://localhost:4200/api/analyze/${getId()}`)
   fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
@@ -28,12 +33,6 @@ const getData = () => {
 
       const score = data.fraud_score;
       setColor(score, button, 'button');
-
-      if (!data.beschreibung) {
-        document.removeChild(
-          document.getElementsByClassName('icon-info-black')[0],
-        );
-      }
     });
 };
 

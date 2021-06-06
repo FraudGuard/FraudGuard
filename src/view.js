@@ -23,6 +23,7 @@ if (
 
   const icon = document.createElement('i');
   icon.className = 'button-icon icon-magnifier-white';
+  icon.id = 'analyzeIcon';
 
   const fraudContent = document.createElement('span');
   fraudContent.innerHTML = 'Anzeige prüfen';
