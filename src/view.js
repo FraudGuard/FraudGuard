@@ -6,7 +6,10 @@ import setColor from './setColor';
  * Erstellt auf der Ansichtsseite einer Anzeige den "Anzeige prüfen" Knopf. Dem Knopf wird das onClick Event getData zugewiesen
  *
  */
-if (!document.getElementById('fraudAdButton')) {
+if (
+  !document.getElementById('fraudAdButton') &&
+  !document.getElementById('registration-submit')
+) {
   const fraudContainer = document.createElement('li');
 
   fraudContainer.id = 'input';
