@@ -14,7 +14,7 @@ logo.width = '100';
 logo.height = '100';
 
 // document.getElementById('site-logo').style.cssText += 'display:flex;align-items:center'
-document.getElementById('site-logo').style.cssText += 'position:relative'
+document.getElementById('site-logo').style.cssText += 'position:relative';
 const ebay = document.getElementById('site-logo');
 
 // logo.style.margin = '0px 0px 50px 350px';
