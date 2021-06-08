@@ -41,15 +41,16 @@ Sobald du jetzt auf die eBay-Kleinanzeigen Webseite wechselst, werden die Anzeig
 - wahrscheinlich,
 - sehr wahrscheinlich,
 
+Ist das nicht der Fall, kannst du bei den noch nicht gespeicherten Anzeigen den Knopf drücken und es wird dann für diese Anzeige einen Score ermittelt.
+
 ![tags](./src/assets/images/tags.png)
 
 ### **8**
 
-Wenn du eine Anzeige siehst, die noch keine Markierung hat, kannst du auf diese klicken und auf den "Anzeige prüfen" Knopf drücken, um die Betrugswahrscheinlichkeit angezeigt zu lassen.
-Hinweis: Das kann manchmal ein bisschen länger dauern, weil unser Server nach zu langer Inaktivität in den Ruhemodus schaltet.
+Wenn du auf der Ansichtsseite einer Anzeige bist, die noch keine Markierung hat, kannst du hier auf den "Anzeige prüfen" Knopf drücken, um die Betrugswahrscheinlichkeit ermitteln zu lassen.
 
 ![button](./src/assets/images/button.png)
 
-Nachdem du den Knopf gedrückt hast, wird die analysierte Anzeigen in einer der vier Kategorien eingestuft.
-Hinweis: bisher wird die Auswertung des Scores noch nicht abgespeichert - wenn du also die Seite neu läds, ist das Ergebnis leider nicht mehr da :(
-![analyze](./src/assets/images/analyze.png)
+Nachdem du den Knopf gedrückt hast, wird die analysierte Anzeigen in einer der vier Kategorien eingestuft. Du hast die Möglichkeit auf das Info-Icon zu drücken und uns Feedback zu geben.
+
+![analyze](./src/assets/images/feedback.png)

@@ -24,7 +24,7 @@ const sendFeedback = () => {
     `https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}/comment`,
     requestOptions,
   );
-  // fetch(`http://localhost:4200/api/analyze/${getId()}/comment`, requestOptions);
+  // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}/comment`, requestOptions);
 
   closeFeedback();
 };

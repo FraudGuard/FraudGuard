@@ -12,11 +12,12 @@ const getData = () => {
   button.children[1].innerHTML = 'Wird geladen';
   button.disabled = true;
 
-  icon.src = 'https://loading.io/65777740-76ae-4724-ae02-478a21e1f8fc';
+  icon.src =
+    'https://github.com/FraudGuard/FraudGuard/blob/main/src/assets/icons/loading-11.gif';
 
   button.replaceChild(icon, document.getElementById('analyzeIcon'));
 
-  // fetch(`http://localhost:4200/api/analyze/${getId()}`)
+  // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
   fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
     .then((response) => response.json())
     .then((data) => {
