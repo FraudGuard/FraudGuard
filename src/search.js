@@ -59,6 +59,8 @@ for (const aditem of aditems) {
           icon.style.border = '1px solid black';
           icon.style.borderRadius = '20px';
           icon.style.marginBottom = '8px';
+          icon.style['z-index'] = '1000';
+          icon.style['pointer-events'] = 'auto';
           icon.addEventListener('click', getD);
           iconContainer.appendChild(icon);
 
