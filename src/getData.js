@@ -12,8 +12,9 @@ const getData = () => {
   button.children[1].innerHTML = 'Wird geladen';
   button.disabled = true;
 
+  icon.style.width = '50px';
   icon.src =
-    'https://github.com/FraudGuard/FraudGuard/blob/main/src/assets/icons/loading-11.gif';
+    'https://github.com/FraudGuard/FraudGuard/blob/main/src/assets/icons/loading-11.gif?raw=true';
 
   button.replaceChild(icon, document.getElementById('analyzeIcon'));
 
