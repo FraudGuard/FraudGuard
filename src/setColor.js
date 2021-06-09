@@ -5,6 +5,7 @@ const wahrscheinlichkeiten = {
   2: 'geringe Wahrscheinlichkeit &nbsp;&nbsp;',
   3: 'wahrscheinlich &nbsp;&nbsp;',
   4: 'sehr wahrscheinlich &nbsp;&nbsp;',
+  5: 'Keine Bewertung möglich &nbsp;&nbsp;',
 };
 
 const infoIcon = document.createElement('i');
@@ -19,7 +20,7 @@ infoIcon.addEventListener('click', openFeedback);
  * @param {HTMLElement} - HMTLElement that gets modified
  * @param {string} - Style of the HMTLElement (button, tag or gallery)
  */
-const setColor = async (score, mount, style) => {
+const setColor = async (score, mount, style, bewertungMoeglich) => {
   const tooltip = document.getElementById('tooltip');
   if (style === 'button') {
     if (score < -30) {
@@ -46,12 +47,19 @@ const setColor = async (score, mount, style) => {
       if (tooltip) {
         tooltip.style.backgroundColor = 'orange';
       }
-    } else {
+    } else if (score <= 40) {
       mount.style.backgroundColor = 'red';
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
       mount.appendChild(infoIcon);
       if (tooltip) {
         tooltip.style.backgroundColor = 'red';
+      }
+    } else if (bewertungMoeglich) {
+      mount.style.backgroundColor = 'lightgrey';
+      mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
+      mount.appendChild(infoIcon);
+      if (tooltip) {
+        tooltip.style.backgroundColor = 'lightgrey';
       }
     }
   } else if (style === 'tag') {
@@ -64,9 +72,12 @@ const setColor = async (score, mount, style) => {
     } else if (score > 10 && score < 40) {
       mount.classList.add('orange-tag');
       mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
-    } else {
+    } else if (score <= 40) {
       mount.classList.add('red-tag');
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
+    } else if (bewertungMoeglich) {
+      mount.classList.add('grey-tag');
+      mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
     }
   } else if (style === 'gallery') {
     if (score < -30) {
@@ -78,9 +89,12 @@ const setColor = async (score, mount, style) => {
     } else if (score > 10 && score < 40) {
       mount.classList.add('orange');
       mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
-    } else {
+    } else if (score <= 40) {
       mount.classList.add('red');
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
+    } else if (bewertungMoeglich) {
+      mount.classList.add('grey');
+      mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
     }
   } else {
     // eslint-disable-next-line no-console
