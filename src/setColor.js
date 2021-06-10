@@ -25,6 +25,7 @@ const setColor = async (score, mount, style, bewertungMoeglich) => {
   if (style === 'button') {
     if (bewertungMoeglich) {
       mount.style.backgroundColor = 'lightgrey';
+      mount.style.color = 'black';
       mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
       mount.appendChild(infoIcon);
       if (tooltip) {

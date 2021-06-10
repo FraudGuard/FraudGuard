@@ -2,13 +2,27 @@ import setColor from './setColor';
 import getId from './getId';
 
 const ignoreProperties = [
+  'ap_sonstiges_anzeige_zeit_tag',
   'beschreibung',
+  'comment',
   'createdAt',
-  'updatedAt',
-  'metadaten_breitengrad',
-  'metadaten_laengengrad',
-  'metadaten_anzeige_zeit',
+  'keine_bewertung_moeglich',
+  'konto_antwortrate',
+  'konto_antwortzeit',
+  'konto_anzeigen_anzahl',
+  'konto_bewertung',
+  'konto_bewertungen_anzahl',
   'konto_erstellt_zeit',
+  'konto_follower_anzahl',
+  'konto_name_laenge',
+  'labeled',
+  'metadaten_anzahl_bilder',
+  'metadaten_anzeige_zeit',
+  'metadaten_breitengrad',
+  'metadaten_kategorie',
+  'metadaten_laengengrad',
+  'toReview',
+  'updatedAt',
 ];
 
 /**
