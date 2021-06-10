@@ -33,7 +33,8 @@ const openFeedback = () => {
   if (!document.getElementById('overlay')) {
     const overlay = document.createElement('div');
     overlay.classList.add('login-overlay');
-    overlay.style.animationDuration = '0.5s'
+    overlay.style.animationDuration = '200ms'
+    overlay.style.zIndex = 10001
     overlay.id = 'overlay';
 
     const overlayContent = document.createElement('div');

@@ -1,4 +1,4 @@
-import getData from './getData';
+import getData, { addTooltip } from './getData';
 import getId from './getId';
 import setColor from './setColor';
 
@@ -35,6 +35,7 @@ if (
       if (data.ad !== undefined) {
         const score = data.ad.fraud_score;
 
+        addTooltip(data.ad);
         setColor(score, button, 'button');
         button.disabled = true;
       }
