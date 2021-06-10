@@ -30,6 +30,7 @@ const setColor = async (score, mount, style, bewertungMoeglich) => {
       mount.appendChild(infoIcon);
       if (tooltip) {
         tooltip.style.backgroundColor = 'lightgrey';
+        tooltip.style.color = 'black';
       } else if (score < -30) {
         mount.style.backgroundColor = 'green';
         mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
