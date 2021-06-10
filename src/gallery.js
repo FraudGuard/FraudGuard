@@ -16,7 +16,7 @@ for (const tile of itemtiles) {
         if (data.ad !== undefined) {
           // if (data.fraud_score) {
           const score = data.fraud_score;
-          const bewertungMoeglich = data.ad.keine_bewertung_moeglich;
+          const bewertungMoeglich = data.ad?.keine_bewertung_moeglich;
           const fraudRibbon = document.createElement('div');
           fraudRibbon.className = 'fraud-ribbon';
 

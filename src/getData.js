@@ -2,11 +2,11 @@ import setColor from './setColor';
 import getId from './getId';
 
 const ignoreProperties = [
+  '_id',
   'ap_sonstiges_anzeige_zeit_tag',
   'beschreibung',
   'comment',
   'createdAt',
-  'keine_bewertung_moeglich',
   'konto_antwortrate',
   'konto_antwortzeit',
   'konto_anzeigen_anzahl',
@@ -29,7 +29,6 @@ const ignoreProperties = [
  * Funktion, die das Tooltip mit der Begründung generiert
  * @param {Ad} ad Anzeige
  */
-
 export const addTooltip = (ad) => {
   let merkmale = '';
   // eslint-disable-next-line guard-for-in
@@ -80,7 +79,7 @@ const getData = () => {
     .then((data) => {
       addTooltip(data);
       const score = data.fraud_score;
-      const bewertungMoeglich = data.ad.keine_bewertung_moeglich;
+      const bewertungMoeglich = data.ad?.keine_bewertung_moeglich;
       setColor(score, button, 'button', bewertungMoeglich);
     });
 };

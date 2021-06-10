@@ -52,7 +52,7 @@ if (!document.getElementById('fraudModuleID')) {
             fraudModule.className = 'text-module-end fraud-module fraudModule';
 
             const score = data.ad.fraud_score;
-            const bewertungMoeglich = data.ad.keine_bewertung_moeglich;
+            const bewertungMoeglich = data.ad?.keine_bewertung_moeglich;
 
             const fraudTag = document.createElement('span');
             fraudTag.className = 'simpletag tag-small fraud-tag';
