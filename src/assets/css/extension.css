@@ -71,6 +71,14 @@
   border-right-color: #004d00;
 }
 
+.grey {
+  background-color: grey;
+}
+
+.grey.fraud-ribbon:after {
+  border-right-color: #676767;
+}
+
 .aditem-main--bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,6 +109,10 @@
 
 .red-tag {
   border: 1px solid red;
+}
+
+.grey-tag {
+  border: 1px solid lightgrey;
 }
 
 #input {

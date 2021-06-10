@@ -25,6 +25,7 @@ if (!document.getElementById('fraudModuleID')) {
             fraudModule.className = 'text-module-end fraud-module';
             fraudModule.id = 'fraudModuleID';
             const score = d.ad.fraud_score;
+            const bewertungMoeglich = d.ad.bewertung_moeglich;
             const fraudTag = document.createElement('span');
             document.replaceChild(
               loadingImg,
@@ -34,7 +35,7 @@ if (!document.getElementById('fraudModuleID')) {
             fraudTag.className = 'simpletag tag-small fraud-tag';
             fraudTag.setAttribute('fraud-tag', score);
 
-            setColor(score, fraudTag, 'tag');
+            setColor(score, fraudTag, 'tag', bewertungMoeglich);
             fraudModule.appendChild(fraudTag);
             aditem.appendChild(fraudModule);
           }
@@ -51,12 +52,13 @@ if (!document.getElementById('fraudModuleID')) {
             fraudModule.className = 'text-module-end fraud-module fraudModule';
 
             const score = data.ad.fraud_score;
+            const bewertungMoeglich = data.ad.keine_bewertung_moeglich;
 
             const fraudTag = document.createElement('span');
             fraudTag.className = 'simpletag tag-small fraud-tag';
             fraudTag.setAttribute('fraud-tag', score);
 
-            setColor(score, fraudTag, 'tag');
+            setColor(score, fraudTag, 'tag', bewertungMoeglich);
 
             fraudModule.appendChild(fraudTag);
             aditem.appendChild(fraudModule);

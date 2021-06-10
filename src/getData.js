@@ -66,7 +66,8 @@ const getData = () => {
     .then((data) => {
       addTooltip(data);
       const score = data.fraud_score;
-      setColor(score, button, 'button');
+      const bewertungMoeglich = data.ad.keine_bewertung_moeglich;
+      setColor(score, button, 'button', bewertungMoeglich);
     });
 };
 

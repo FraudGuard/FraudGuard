@@ -16,7 +16,7 @@ for (const tile of itemtiles) {
         if (data.ad !== undefined) {
           // if (data.fraud_score) {
           const score = data.fraud_score;
-
+          const bewertungMoeglich = data.ad.keine_bewertung_moeglich;
           const fraudRibbon = document.createElement('div');
           fraudRibbon.className = 'fraud-ribbon';
 
@@ -25,7 +25,7 @@ for (const tile of itemtiles) {
           fraudProbability.setAttribute('fraud-probability', score);
 
           // Assigning background-color class to the ribbons based on the probability in the spans
-          setColor(score, fraudProbability, 'gallery');
+          setColor(score, fraudProbability, 'gallery', bewertungMoeglich);
 
           fraudRibbon.appendChild(fraudProbability);
           tile.appendChild(fraudRibbon);
