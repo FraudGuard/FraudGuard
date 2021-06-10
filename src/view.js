@@ -37,8 +37,9 @@ if (
       if (data.ad !== undefined) {
         const score = data.ad.fraud_score;
         const bewertungMoeglich = data.ad?.keine_bewertung_moeglich;
-
-        addTooltip(data.ad);
+        if (!document.getElementById('tooltip')) {
+          addTooltip(data.ad);
+        }
         setColor(score, button, 'button', bewertungMoeglich);
         button.disabled = true;
       }
