@@ -23,82 +23,82 @@ infoIcon.addEventListener('click', openFeedback);
 const setColor = async (score, mount, style, bewertungMoeglich) => {
   const tooltip = document.getElementById('tooltip');
   if (style === 'button') {
-    if (score < -30) {
-      mount.style.backgroundColor = 'green';
-      mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
-      mount.appendChild(infoIcon);
-      if (tooltip) {
-        tooltip.style.backgroundColor = 'green';
-        tooltip.style.color = 'white';
-      }
-    } else if (score >= -30 && score < 20) {
-      mount.style.backgroundColor = 'yellow';
-      mount.style.color = 'black';
-      mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
-      mount.appendChild(infoIcon);
-      if (tooltip) {
-        tooltip.style.backgroundColor = 'yellow';
-        tooltip.style.color = 'black';
-      }
-    } else if (score >= 20 && score < 40) {
-      mount.style.backgroundColor = 'orange';
-      mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
-      mount.appendChild(infoIcon);
-      if (tooltip) {
-        tooltip.style.backgroundColor = 'orange';
-      }
-    } else if (score <= 40) {
-      mount.style.backgroundColor = 'red';
-      mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
-      mount.appendChild(infoIcon);
-      if (tooltip) {
-        tooltip.style.backgroundColor = 'red';
-      }
-    } else if (bewertungMoeglich) {
+    if (bewertungMoeglich) {
       mount.style.backgroundColor = 'lightgrey';
       mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
       mount.appendChild(infoIcon);
       if (tooltip) {
         tooltip.style.backgroundColor = 'lightgrey';
+      } else if (score < -30) {
+        mount.style.backgroundColor = 'green';
+        mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
+        mount.appendChild(infoIcon);
+        if (tooltip) {
+          tooltip.style.backgroundColor = 'green';
+          tooltip.style.color = 'white';
+        }
+      } else if (score >= -30 && score < 20) {
+        mount.style.backgroundColor = 'yellow';
+        mount.style.color = 'black';
+        mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
+        mount.appendChild(infoIcon);
+        if (tooltip) {
+          tooltip.style.backgroundColor = 'yellow';
+          tooltip.style.color = 'black';
+        }
+      } else if (score >= 20 && score < 40) {
+        mount.style.backgroundColor = 'orange';
+        mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
+        mount.appendChild(infoIcon);
+        if (tooltip) {
+          tooltip.style.backgroundColor = 'orange';
+        }
+      } else if (score <= 40) {
+        mount.style.backgroundColor = 'red';
+        mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
+        mount.appendChild(infoIcon);
+        if (tooltip) {
+          tooltip.style.backgroundColor = 'red';
+        }
       }
+    } else if (style === 'tag') {
+      if (score < -30) {
+        mount.classList.add('green-tag');
+        mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
+      } else if (score > -30 && score < 10) {
+        mount.classList.add('yellow-tag');
+        mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
+      } else if (score > 10 && score < 40) {
+        mount.classList.add('orange-tag');
+        mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
+      } else if (score <= 40) {
+        mount.classList.add('red-tag');
+        mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
+      } else if (bewertungMoeglich) {
+        mount.classList.add('grey-tag');
+        mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
+      }
+    } else if (style === 'gallery') {
+      if (score < -30) {
+        mount.classList.add('green');
+        mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
+      } else if (score > -30 && score < 10) {
+        mount.classList.add('yellow');
+        mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
+      } else if (score > 10 && score < 40) {
+        mount.classList.add('orange');
+        mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
+      } else if (score <= 40) {
+        mount.classList.add('red');
+        mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
+      } else if (bewertungMoeglich) {
+        mount.classList.add('grey');
+        mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
+      }
+    } else {
+      // eslint-disable-next-line no-console
+      console.log('setColor parameter "style" doesnt match');
     }
-  } else if (style === 'tag') {
-    if (score < -30) {
-      mount.classList.add('green-tag');
-      mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
-    } else if (score > -30 && score < 10) {
-      mount.classList.add('yellow-tag');
-      mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
-    } else if (score > 10 && score < 40) {
-      mount.classList.add('orange-tag');
-      mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
-    } else if (score <= 40) {
-      mount.classList.add('red-tag');
-      mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
-    } else if (bewertungMoeglich) {
-      mount.classList.add('grey-tag');
-      mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
-    }
-  } else if (style === 'gallery') {
-    if (score < -30) {
-      mount.classList.add('green');
-      mount.innerHTML = `${wahrscheinlichkeiten[1]}`;
-    } else if (score > -30 && score < 10) {
-      mount.classList.add('yellow');
-      mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
-    } else if (score > 10 && score < 40) {
-      mount.classList.add('orange');
-      mount.innerHTML = `${wahrscheinlichkeiten[3]}`;
-    } else if (score <= 40) {
-      mount.classList.add('red');
-      mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
-    } else if (bewertungMoeglich) {
-      mount.classList.add('grey');
-      mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
-    }
-  } else {
-    // eslint-disable-next-line no-console
-    console.log('setColor parameter "style" doesnt match');
   }
 };
 export default setColor;
