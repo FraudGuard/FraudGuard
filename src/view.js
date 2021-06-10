@@ -8,7 +8,9 @@ import setColor from './setColor';
  */
 if (
   !document.getElementById('fraudAdButton') &&
-  !document.getElementById('registration-submit')
+  !document.getElementById('registration-submit') &&
+  !document.getElementById('login-submit') &&
+  !document.getElementsByClassName('ownprofile-header')[0]
 ) {
   const fraudContainer = document.createElement('li');
 
