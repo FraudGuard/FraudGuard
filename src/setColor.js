@@ -20,10 +20,10 @@ infoIcon.addEventListener('click', openFeedback);
  * @param {HTMLElement} - HMTLElement that gets modified
  * @param {string} - Style of the HMTLElement (button, tag or gallery)
  */
-const setColor = async (score, mount, style, bewertungMoeglich) => {
+const setColor = async (score, mount, style, keineBewertungMoeglich) => {
   const tooltip = document.getElementById('tooltip');
   if (style === 'button') {
-    if (bewertungMoeglich === 1) {
+    if (keineBewertungMoeglich === 1) {
       mount.style.backgroundColor = 'lightgrey';
       mount.style.color = 'black';
       mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
