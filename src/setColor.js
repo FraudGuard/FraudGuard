@@ -77,7 +77,7 @@ const setColor = async (score, mount, style, keineBewertungMoeglich) => {
     } else if (score <= 40) {
       mount.classList.add('red-tag');
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
-    } else if (bewertungMoeglich) {
+    } else if (keineBewertungMoeglich) {
       mount.classList.add('grey-tag');
       mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
     }
@@ -94,7 +94,7 @@ const setColor = async (score, mount, style, keineBewertungMoeglich) => {
     } else if (score <= 40) {
       mount.classList.add('red');
       mount.innerHTML = `${wahrscheinlichkeiten[4]}`;
-    } else if (bewertungMoeglich) {
+    } else if (keineBewertungMoeglich) {
       mount.classList.add('grey');
       mount.innerHTML = `${wahrscheinlichkeiten[5]}`;
     } else {
