@@ -23,6 +23,12 @@ const ignoreProperties = [
   'metadaten_laengengrad',
   'toReview',
   'updatedAt',
+  'antipattern_gesamtscore',
+  'antipattern_anzahl_gesamt',
+  'pattern_gesamtscore',
+  'pattern_anzahl_gesamt',
+  'konto_freundlichkeit',
+  'preis_waehrung_eur',
 ];
 
 /**

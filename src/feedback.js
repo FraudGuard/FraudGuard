@@ -1,9 +1,15 @@
 import getId from './getId';
 
+/**
+ * Schließt das Feedbackfenster wieder
+ */
 const closeFeedback = () => {
   document.getElementById('overlay').remove();
 };
 
+/**
+ * Funktion, welches mittels Patch Request einen Kommentar an den Backendserver schickt.
+ */
 const sendFeedback = () => {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
@@ -29,11 +35,14 @@ const sendFeedback = () => {
   closeFeedback();
 };
 
+/**
+ * Generiert die Eingabefelder für das Feedback mit den dazugehörigen Knöpfen
+ */
 const openFeedback = () => {
   if (!document.getElementById('overlay')) {
     const overlay = document.createElement('div');
     overlay.classList.add('login-overlay');
-    overlay.style.animationDuration = '200ms';
+    overlay.style.animationDuration = '1s';
     overlay.style.zIndex = 10001;
     overlay.id = 'overlay';
 
