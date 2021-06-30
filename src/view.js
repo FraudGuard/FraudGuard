@@ -31,7 +31,7 @@ if (
   fraudContent.innerHTML = 'Anzeige prüfen';
   fraudContent.id = 'fraudContent';
 
-  fetch(`http://localhost:4200/api/ads/${getId()}`)
+  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${getId()}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.ad !== undefined) {

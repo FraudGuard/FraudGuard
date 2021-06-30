@@ -22,4 +22,4 @@ link.style.top = '-20px';
 link.style.transform = 'translateX(-50%)';
 
 link.appendChild(logo);
-ebay.append(link, ebay.childNodes[0]);
+ebay.append(link, ebay?.childNodes[0]);

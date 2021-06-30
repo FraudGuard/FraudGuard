@@ -80,13 +80,13 @@ const getData = () => {
 
   button.replaceChild(icon, document.getElementById('analyzeIcon'));
 
-  // fetch(`http://localhost:4200/api/analyze/${getId()}`)
-  fetch(`http://localhost:4200/api/analyze/${getId()}`)
+  // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
+  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
     .then((response) => response.json())
     .then((data) => {
       addTooltip(data);
-      const score = data.fraud_score;
-      const keineBewertungMoeglich = data.keine_bewertung_moeglich ? 1 : 0;
+      const score = data?.fraud_score;
+      const keineBewertungMoeglich = data?.keine_bewertung_moeglich ? 1 : 0;
       setColor(score, button, 'button', keineBewertungMoeglich);
     });
 };
