@@ -31,16 +31,16 @@ if (
   fraudContent.innerHTML = 'Anzeige prüfen';
   fraudContent.id = 'fraudContent';
 
-  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${getId()}`)
+  fetch(`http://localhost:4200/api/ads/${getId()}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.ad !== undefined) {
         const score = data.ad.fraud_score;
-        const bewertungMoeglich = data.ad?.keine_bewertung_moeglich;
+        const keineBewertungMoeglich = data.ad?.keine_bewertung_moeglich;
         if (!document.getElementById('tooltip')) {
           addTooltip(data.ad);
         }
-        setColor(score, button, 'button', bewertungMoeglich);
+        setColor(score, button, 'button', keineBewertungMoeglich);
         button.disabled = true;
       }
     });

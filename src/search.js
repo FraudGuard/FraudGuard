@@ -13,8 +13,8 @@ if (!document.getElementById('fraudModuleID')) {
     const id = matches[0];
 
     const getD = () => {
-      // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
-      fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
+      // fetch(`http://localhost:4200/api/analyze/${id}`)
+      fetch(`http://localhost:4200/api/analyze/${id}`)
         .then((response) => response.json())
         .then((d) => {
           if (d.ad !== undefined) {
@@ -43,8 +43,8 @@ if (!document.getElementById('fraudModuleID')) {
     };
 
     if (id !== 0 || id !== undefined) {
-      // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${id}`)
-      fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${id}`)
+      // fetch(`http://localhost:4200/api/ads/${id}`)
+      fetch(`http://localhost:4200/api/ads/${id}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.ad !== undefined) {

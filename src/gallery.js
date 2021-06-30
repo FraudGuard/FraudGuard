@@ -10,7 +10,7 @@ for (const tile of itemtiles) {
   const matches = tile.innerHTML.match(/[0-9]{9,}/);
   const id = matches?.[0];
   if (id) {
-    fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/ads/${id}`)
+    fetch(`http://localhost:4200/api/ads/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.ad !== undefined) {

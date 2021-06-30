@@ -55,12 +55,12 @@
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: lightgreen;
   color: black;
 }
 
 .yellow.fraud-ribbon:after {
-  border-right-color: #cccc00;
+  border-right-color: #64e764;
 }
 
 .green {
@@ -100,7 +100,7 @@
 }
 
 .yellow-tag {
-  border: 1px solid yellow;
+  border: 1px solid lightgreen;
 }
 
 .orange-tag {

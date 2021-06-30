@@ -36,17 +36,18 @@ const ignoreProperties = [
  * @param {Ad} ad Anzeige
  */
 export const addTooltip = (ad) => {
-  let merkmale = '';
+  // let merkmale = '';
   // eslint-disable-next-line guard-for-in
   for (const k in ad) {
     if (ad[k] !== 0 && ignoreProperties.indexOf(k) === -1) {
-      merkmale += `${k}: <b>${Math.round(ad[k] * 100) / 100}</b><br/>`;
+      // merkmale += `${k}: <b>${Math.round(ad[k] * 100) / 100}</b><br/>`;
     }
   }
   const tooltip = document.createElement('span');
-  tooltip.innerHTML = `${
-    ad?.beschreibung ? `${ad.beschreibung}<br/><hr><br/>` : ''
-  }<b>Zutreffende Merkmale:</b><br/>${merkmale}`;
+  tooltip.innerHTML = ad?.beschreibung;
+  // tooltip.innerHTML = `${
+  //   ad?.beschreibung ? `${ad.beschreibung}<br/><hr><br/>` : ''
+  // }<b>Zutreffende Merkmale:</b><br/>${merkmale}`;
   tooltip.className = 'tooltip';
   tooltip.style.zIndex = 1000;
   tooltip.style.animationName = 'fadein';
@@ -79,8 +80,8 @@ const getData = () => {
 
   button.replaceChild(icon, document.getElementById('analyzeIcon'));
 
-  // fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
-  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${getId()}`)
+  // fetch(`http://localhost:4200/api/analyze/${getId()}`)
+  fetch(`http://localhost:4200/api/analyze/${getId()}`)
     .then((response) => response.json())
     .then((data) => {
       addTooltip(data);

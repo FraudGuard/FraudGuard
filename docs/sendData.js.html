@@ -39,7 +39,7 @@ const sendData = () => {
     10,
   );
 
-  fetch(`https://fraudguard-utmebwtwmq-ew.a.run.app/api/analyze/${id}`)
+  fetch(`http://localhost:4200/api/analyze/${id}`)
     .then((response) => response.json())
     .then((data) => {
       const button = document.getElementById('fraudAdButton');

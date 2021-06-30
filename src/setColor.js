@@ -41,12 +41,12 @@ const setColor = async (score, mount, style, keineBewertungMoeglich) => {
         tooltip.style.color = 'white';
       }
     } else if (score >= -30 && score < 20) {
-      mount.style.backgroundColor = 'yellow';
+      mount.style.backgroundColor = 'lightgreen';
       mount.style.color = 'black';
       mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
       mount.appendChild(infoIcon);
       if (tooltip) {
-        tooltip.style.backgroundColor = 'yellow';
+        tooltip.style.backgroundColor = 'lightgreen';
         tooltip.style.color = 'black';
       }
     } else if (score >= 20 && score < 40) {
