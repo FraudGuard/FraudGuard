@@ -1,10 +1,10 @@
 import { openFeedback } from './feedback';
 
 const wahrscheinlichkeiten = {
-  1: 'Unwahrscheinlich &nbsp;&nbsp;',
-  2: 'geringe Wahrscheinlichkeit &nbsp;&nbsp;',
-  3: 'wahrscheinlich &nbsp;&nbsp;',
-  4: 'sehr wahrscheinlich &nbsp;&nbsp;',
+  1: 'Kein Betrug &nbsp;&nbsp;',
+  2: 'Betrug unwahrscheinlich &nbsp;&nbsp;',
+  3: 'Betrug wahrscheinlich &nbsp;&nbsp;',
+  4: 'Hohe Betrugswahrscheinlichkeit &nbsp;&nbsp;',
   5: 'Keine Bewertung möglich &nbsp;&nbsp;',
 };
 
@@ -41,12 +41,12 @@ const setColor = async (score, mount, style, keineBewertungMoeglich) => {
         tooltip.style.color = 'white';
       }
     } else if (score >= -30 && score < 20) {
-      mount.style.backgroundColor = 'lightgreen';
+      mount.style.backgroundColor = '#9DE82B';
       mount.style.color = 'black';
       mount.innerHTML = `${wahrscheinlichkeiten[2]}`;
       mount.appendChild(infoIcon);
       if (tooltip) {
-        tooltip.style.backgroundColor = 'lightgreen';
+        tooltip.style.backgroundColor = '#9DE82B';
         tooltip.style.color = 'black';
       }
     } else if (score >= 20 && score < 40) {
